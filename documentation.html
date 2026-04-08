@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case 4 — Reflective Documentation — 中島郁子</title>
+<meta name="description" content="Reflective Documentation — Ikuko Nakajima's practice of visual documentation as design thinking.">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="ドキュメンテーション — 中島郁子">
+<meta property="og:description" content="記録と思考の可視化">
+<meta property="og:url" content="https://ikukonakajima.jp/documentation">
+<meta property="og:image" content="https://ikukonakajima.jp/key/IMG_0396.jpg">
+<meta property="og:locale" content="ja_JP">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ドキュメンテーション — 中島郁子">
+<meta name="twitter:description" content="記録と思考の可視化">
+<meta name="twitter:image" content="https://ikukonakajima.jp/key/IMG_0396.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Inter:wght@200;400;900&family=Noto+Sans+JP:wght@400;900&family=Shippori+Mincho+B1:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/common.css">
+<style>
+/* Key visual */
+.doc-keyvisual {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 32px;
+}
+.doc-keyvisual img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Page body */
+.page-body { padding: 40px 48px 64px 48px; }
+
+/* Lead text */
+.lead-text {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: clamp(16px, 1.8vw, 20px);
+  font-weight: 900;
+  line-height: 2;
+  color: #1a1a1a;
+  letter-spacing: 0.04em;
+  max-width: 740px;
+  margin-bottom: 48px;
+  text-wrap: pretty;
+}
+
+/* Definition items */
+.def-block { max-width: 680px; margin-bottom: 40px; }
+.def-item { padding: 12px 0; }
+.def-item:first-child { padding-top: 0; }
+.def-label {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+.def-text {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #444;
+  letter-spacing: 0.03em;
+}
+
+/* Section head */
+.section-head {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  color: #bbb;
+  text-transform: uppercase;
+  padding: 24px 0 0 0;
+  border-top: 1px solid #e8e8e8;
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+.section-head:first-of-type {
+  margin-top: 0;
+  border-top: none;
+  padding-top: 0;
+}
+
+/* Category cards grid */
+.doc-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 40px;
+}
+.doc-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.doc-summary-title {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  color: #1a1a1a;
+}
+
+/* Thumbnail */
+.doc-thumb {
+  cursor: pointer;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+.doc-thumb img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.2s;
+}
+.doc-thumb:hover img { opacity: 0.85; }
+.doc-caption {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #777;
+  letter-spacing: 0.03em;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.88);
+  z-index: 1000;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .page-body { padding: 24px 16px 40px !important; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+<button class="hamburger" aria-label="メニュー" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
+  <div class="nav-bottom">
+    <a class="nav-logo" href="/">IKUKO<br>NAKAJIMA</a>
+  </div>
+  <div class="nav-top">
+    <ul class="nav-links">
+      <li><a href="/concept">Concept</a></li>
+      <li><a href="/outputs">Profile</a></li>
+      <li class="nav-case"><a href="/case1">Case 1</a><span class="nav-case-ja">三条マルシェ</span></li>
+      <li class="nav-case"><a href="/case2">Case 2</a><span class="nav-case-ja">デザイン論</span></li>
+      <li class="nav-case"><a href="/documentation" class="active">Case 3</a><span class="nav-case-ja">ドキュメンテーション</span></li>
+      <li class="nav-case"><a href="/project">Works</a><span class="nav-case-ja">Works</span></li>
+      <li><a href="/contact" aria-label="お問い合わせ" style="display:flex;align-items:center;"><svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.75" y="0.75" width="15.5" height="11.5" rx="1.25" stroke="currentColor" stroke-width="1.2"/><polyline points="0.75,0.75 8.5,7.5 16.25,0.75" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" fill="none"/></svg></a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-en">Documentation</div>
+  <div class="page-header-ja">記録と思考の可視化</div>
+</div>
+
+<div class="doc-keyvisual">
+  <img src="key/IMG_0260.jpg" alt="Reflective Documentation">
+</div>
+
+<div class="page-body">
+
+  <p class="lead-text">話者の発現・対話と議論・自らの思考と対峙し、並走しながら同じ速度で描いていく——テキスト・グラフィック・記号を駆使し、情報を網羅しながら構造を可視化し、あらたなデザイン的飛躍につなげる。</p>
+
+  <div class="doc-thumb" onclick="openLightbox('key/20240420_4.jpg')" style="margin-bottom: 48px;">
+    <img src="key/20240420_4.jpg" alt="2024 ポスター発表「ドローイングとロジカルシンキング」" style="aspect-ratio: auto; max-height: none;">
+  </div>
+
+  <div class="section-head" style="margin-top: 0;"></div>
+
+  <div class="doc-cards-grid">
+
+    <!-- リアルタイムドキュメンテーション -->
+    <div class="doc-card">
+      <div class="doc-summary-title">リアルタイムドキュメンテーション</div>
+      <div class="doc-thumb" onclick="openLightbox('key/IMG_7783.jpg')">
+        <img src="key/IMG_7783.jpg" alt="リアルタイムドキュメンテーション">
+      </div>
+      <p class="doc-caption">他者の発表や会議、フィールドワークをその場で瞬間的・視覚的に記録する。整理より速度を優先し、思考のタイムラインに同期しながら描き続ける。</p>
+    </div>
+
+    <!-- ブレインストーミング（自己省察） -->
+    <div class="doc-card">
+      <div class="doc-summary-title">ブレインストーミング（自己省察）</div>
+      <div class="doc-thumb" onclick="openLightbox('key/brain_storm.JPG')">
+        <img src="key/brain_storm.JPG" alt="ブレインストーミング">
+      </div>
+      <p class="doc-caption">自分の思考の中に浮かぶアイデアや概念を、まるで他者を眺めるようにリアルタイムで視覚化する。一人での思考整理・アイデア展開・自己省察に用いる。</p>
+    </div>
+
+    <!-- 取材ノート -->
+    <div class="doc-card">
+      <div class="doc-summary-title">取材ノート</div>
+      <div class="doc-thumb" onclick="openLightbox('key/note1.JPG')">
+        <img src="key/note1.JPG" alt="取材ノート">
+      </div>
+      <p class="doc-caption">インタビューや現場取材の場で、得られた情報と洞察をリアルタイムに描き記す。非構造化インタビューの技術を下敷きに、事実と主観を色分けしながら記録する。</p>
+    </div>
+
+    <!-- 読書メモ -->
+    <div class="doc-card">
+      <div class="doc-summary-title">読書メモ</div>
+      <div class="doc-thumb" onclick="openLightbox('key/IMG_2829.jpg')">
+        <img src="key/IMG_2829.jpg" alt="読書メモ">
+      </div>
+      <p class="doc-caption">書籍や資料を読みながら、内容を視覚的に描き記す。文字を追うだけでは得られない全体像と構造が、描くことで浮かび上がる。</p>
+    </div>
+
+    <!-- 考察 -->
+    <div class="doc-card">
+      <div class="doc-summary-title">考察</div>
+      <div class="doc-thumb" onclick="openLightbox('key/IMG_0173.jpeg')">
+        <img src="key/IMG_0173.jpeg" alt="考察">
+      </div>
+      <p class="doc-caption">プロジェクトの「デザイン環世界」を描き出す。取材や自己省察で見つかった「デザイン要素」を一つの系に入れ込んで、因果関係やディスコミュニケーションの現状を検証していく。</p>
+    </div>
+
+    <!-- ドローイング（描画） -->
+    <div class="doc-card">
+      <div class="doc-summary-title">ドローイング（描画）</div>
+      <div class="doc-thumb" onclick="openLightbox('key/IMG_0089.jpg')">
+        <img src="key/IMG_0089.jpg" alt="ドローイング（描画）">
+      </div>
+      <p class="doc-caption">対象を観察しながら描くことで、見えていなかった構造や関係性が浮かび上がる。描く行為そのものが、深い理解への探索プロセスとなる。</p>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<footer>
+  <div class="footer-name">中島郁子</div>
+  <div class="footer-copy">© 2026 Ikuko Nakajima</div>
+</footer>
+
+<script>
+function toggleNav(btn) {
+  btn.classList.toggle('active');
+  document.querySelector('.nav-top').classList.toggle('open');
+}
+function openLightbox(src) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concept — 中島郁子</title>
+<meta name="description" content="Concept — デザイン環世界。実践と研究を往還しながら、情報を構造化し、人が動ける場を設計する。">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Concept — 中島郁子">
+<meta property="og:description" content="デザイン環世界——構造化と可視化で、デザインの動きを見る">
+<meta property="og:url" content="https://ikukonakajima.jp/concept">
+<meta property="og:image" content="https://ikukonakajima.jp/key/IMG_0396.jpg">
+<meta property="og:locale" content="ja_JP">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Concept — 中島郁子">
+<meta name="twitter:description" content="デザイン環世界——構造化と可視化で、デザインの動きを見る">
+<meta name="twitter:image" content="https://ikukonakajima.jp/key/IMG_0396.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Inter:wght@200;400;900&family=Noto+Sans+JP:wght@400;900&family=Shippori+Mincho+B1:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/common.css">
+<style>
+/* Hero image */
+.concept-hero {
+  width: 100%;
+  display: block;
+  opacity: 0.9;
+  height: auto;
+  margin-top: 24px;
+}
+
+/* Content */
+.concept-body { padding: 48px 48px 64px 48px; }
+
+/* Statement */
+.concept-statement {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: clamp(18px, 2.2vw, 26px);
+  font-weight: 900;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+  color: #1a1a1a;
+  margin: 40px 0;
+  text-wrap: pretty;
+}
+
+/* Lead block */
+.concept-lead {
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+.concept-title-vertical {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  color: #1a1a1a;
+  flex-shrink: 0;
+}
+.concept-heading {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: clamp(16px, 1.6vw, 20px);
+  font-weight: 700;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+/* Body text */
+.concept-text {
+  font-size: clamp(14px, 1.4vw, 16px);
+  line-height: 2.2;
+  color: #333;
+  letter-spacing: 0.04em;
+  margin-bottom: 0;
+  max-width: 720px;
+}
+
+/* Divider */
+.concept-divider {
+  border: none;
+  border-top: 1px solid #e8e8e8;
+  margin: 40px 0;
+}
+
+/* Definition list */
+.def-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 720px;
+  margin-bottom: 48px;
+}
+.def-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+  border-top: 1px solid #f0f0f0;
+  padding: 16px 0;
+  align-items: baseline;
+}
+.def-term {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #bbb;
+  letter-spacing: 0.06em;
+  line-height: 1.8;
+  position: relative;
+  padding-left: 10px;
+}
+.def-term::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  width: 1.5px;
+  height: 1em;
+  background: var(--accent);
+}
+.def-desc {
+  font-size: 13px;
+  line-height: 2;
+  color: #444;
+  letter-spacing: 0.03em;
+}
+
+/* Note */
+.concept-note {
+  font-size: 11px;
+  color: #bbb;
+  line-height: 2;
+  letter-spacing: 0.03em;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 12px;
+  margin-top: 0;
+  max-width: 720px;
+}
+
+/* Image grid */
+.image-grid-caption {
+  margin-top: 48px;
+  margin-bottom: 16px;
+  padding-top: 32px;
+  border-top: 1px solid #e8e8e8;
+}
+.concept-section-head {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  color: #bbb;
+  text-transform: uppercase;
+  padding: 32px 0 0 0;
+  border-top: 2px solid #1a1a1a;
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+.concept-section-ja {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 10px;
+  color: #ccc;
+  letter-spacing: 0.08em;
+  text-transform: none;
+  margin-left: 12px;
+}
+.profile-section { margin-bottom: 0; }
+.profile-name {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: clamp(20px, 2.5vw, 30px);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.profile-role {
+  font-size: 13px;
+  color: #888;
+  letter-spacing: 0.04em;
+  margin-bottom: 24px;
+}
+.profile-items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+.profile-item {
+  font-size: 13px;
+  color: #555;
+  letter-spacing: 0.04em;
+  line-height: 1.8;
+}
+.profile-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  text-decoration: none;
+}
+.profile-link:hover { opacity: 0.7; }
+.image-grid-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+.image-grid-desc {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #888;
+  letter-spacing: 0.04em;
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.image-grid img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  opacity: 0.88;
+}
+
+@media (max-width: 768px) {
+  .concept-body { padding: 32px 16px 48px !important; }
+  .concept-lead { gap: 24px; }
+  .concept-title-vertical { font-size: 48px !important; }
+  .def-item { grid-template-columns: 1fr !important; gap: 6px; }
+  .image-grid { grid-template-columns: 1fr 1fr !important; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+<button class="hamburger" aria-label="メニュー" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
+  <div class="nav-bottom">
+    <a class="nav-logo" href="/">IKUKO<br>NAKAJIMA</a>
+  </div>
+  <div class="nav-top">
+    <ul class="nav-links">
+      <li><a href="/concept" class="active">Concept</a></li>
+      <li><a href="/outputs">Profile</a></li>
+      <li class="nav-case"><a href="/case1">Case 1</a><span class="nav-case-ja">三条マルシェ</span></li>
+      <li class="nav-case"><a href="/case2">Case 2</a><span class="nav-case-ja">デザイン論</span></li>
+      <li class="nav-case"><a href="/documentation">Case 3</a><span class="nav-case-ja">ドキュメンテーション</span></li>
+      <li class="nav-case"><a href="/project">Works</a><span class="nav-case-ja">Works</span></li>
+      <li><a href="/contact" aria-label="お問い合わせ" style="display:flex;align-items:center;"><svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.75" y="0.75" width="15.5" height="11.5" rx="1.25" stroke="currentColor" stroke-width="1.2"/><polyline points="0.75,0.75 8.5,7.5 16.25,0.75" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" fill="none"/></svg></a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-en">Concept</div>
+  <div class="page-header-ja">コンセプト</div>
+</div>
+
+<div class="concept-body">
+
+  <img class="concept-hero" src="key/IMG_6257_key.jpeg" alt="デザイン環世界" style="width:100%; height:auto; margin-bottom:0;">
+
+  <hr class="concept-divider">
+
+  <h2 class="concept-statement">「デザインは人をしあわせにする技術である」——実践と研究を往還しながら、「自分をとりまくデザイン」を構造化、あるいは「できない」を可視化して、自由な場を設計する。</h2>
+
+  <hr class="concept-divider">
+
+  <div class="concept-lead">
+    <div class="concept-title-vertical">デザイン<br>環世界</div>
+    <div class="concept-lead-text">
+      <p class="concept-text">多種多様な「デザイン」——成果物・サービス・プロセス・コンセプト——がどのような要素を内包し、どのように構成され、どう動いているかを知るための体系モデル「デザイン環世界」を提唱している。<br>因果関係・時系列・工程などを包括的に把握し、プロジェクトをより効果的に進め、ディスコミュニケーションの発見・修復を可能にする。</p>
+    </div>
+  </div>
+
+  <div class="def-list">
+    <div class="def-item">
+      <div class="def-term">デザイン環世界<br>のイメージ</div>
+      <div class="def-desc">スカラー的な多次元世界の中に「デザイン要素」が離散的に存在し、デザイン行為によって変容しながら、まるで生態系のように相互に作用し循環している。</div>
+    </div>
+    <div class="def-item">
+      <div class="def-term">デザイン要素</div>
+      <div class="def-desc">行為・工程・成果物・アイデアなど。行為者（人）もまた、デザイン要素のひとつである。</div>
+    </div>
+    <div class="def-item">
+      <div class="def-term">デザイン行為</div>
+      <div class="def-desc">個々のデザイン要素のニーズや意味を察知し、干渉することで系の機能や品質を変化させる機構。行為者がそれをデザインと意識するかどうかは問わない。</div>
+    </div>
+    <div class="def-item">
+      <div class="def-term">概念の起点</div>
+      <div class="def-desc">「Umwelt（Uexküll）」の「生態系」における相互作用と循環のイメージを発想の起点とし、情報デザイン研究部会の「環世界」議論も踏まえ、独自に構築した。<br><span style="font-size:11px; color:#bbb;">参考：ヤーコプ・フォン・ユクスキュル「生物から見た世界」（岩波文庫）／日本デザイン学会情報デザイン研究部会「環世界」議論</span></div>
+    </div>
+  </div>
+
+  <div class="image-grid-caption">
+    <p class="image-grid-title">「デザイン環世界」の概念図・アイデアスケッチ</p>
+    <p class="image-grid-desc">デザイン学研究者・編集者＆ライター・デザイナー・教員・地域コミュニティ実践者・イラストレーターほか、多種多様なステイタスと現場から見た「わたしをとりまくデザイン環世界」</p>
+  </div>
+  <div class="image-grid">
+    <img src="key/IMG_0172.JPG" alt="">
+    <img src="key/IMG_1571.jpg" alt="">
+    <img src="key/IMG_0177.jpeg" alt="">
+    <img src="key/IMG_6116.jpeg" alt="">
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-name">中島郁子</div>
+  <div class="footer-copy">© 2026 Ikuko Nakajima</div>
+</footer>
+
+<script>
+function toggleNav(btn) {
+  btn.classList.toggle('active');
+  document.querySelector('.nav-top').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>

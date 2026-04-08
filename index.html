@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ikuko Nakajima</title>
+<meta name="description" content="Ikuko Nakajima — Designer, researcher, and educator practicing design across communities, institutions, and academia in Japan.">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="中島郁子 / Ikuko Nakajima">
+<meta property="og:description" content="デザイン学研究者——実践と研究を往還し、デザイン環世界を媒介しながら状況を読み解き、誰もが楽しめる「お砂場」を創造する。">
+<meta property="og:url" content="https://ikukonakajima.jp">
+<meta property="og:image" content="https://ikukonakajima.jp/key/IMG_0396.jpg">
+<meta property="og:locale" content="ja_JP">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="中島郁子 / Ikuko Nakajima">
+<meta name="twitter:description" content="デザイン学研究者——実践と研究を往還し、デザイン環世界を媒介しながら状況を読み解き、誰もが楽しめる「お砂場」を創造する。">
+<meta name="twitter:image" content="https://ikukonakajima.jp/key/IMG_0396.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@200;300;400;900&family=Shippori+Mincho+B1:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/common.css">
+<style>
+/* Hero image */
+.hero-img-wrap {
+  position: relative;
+  width: 100%;
+  padding: 16px 48px 8px;
+}
+.hero-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 88% 80% at center, transparent 55%, #fff 85%);
+  pointer-events: none;
+  z-index: 1;
+}
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hero text — 2 column */
+.hero-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+}
+.hero-catchcopy {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: clamp(40px, 7vw, 88px);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  -webkit-text-size-adjust: 100%;
+  overflow-wrap: anywhere;
+  padding: 32px 48px 32px 48px;
+}
+.hero-right { padding: 32px 48px 32px 48px; max-width: 360px; }
+.hero-accent {
+  width: 20px;
+  height: 2px;
+  background: #f04a00;
+  margin-bottom: 28px;
+}
+.hero-name {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+.hero-name-en {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  color: #aaa;
+  margin-bottom: 40px;
+}
+.hero-lead {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2.1;
+  color: #666;
+  letter-spacing: 0.03em;
+}
+
+/* Pages grid */
+.pages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #e8e8e8;
+  margin-top: 24px;
+  position: relative;
+}
+.pages-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(key/008.jpg);
+  background-size: cover;
+  background-position: center top;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 0;
+}
+.page-card {
+  padding: 48px 48px;
+  border-right: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  text-decoration: none;
+  color: #1a1a1a;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.page-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--card-bg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+.page-card:hover::before { opacity: 1; }
+.page-card > * { position: relative; z-index: 1; }
+.page-card:nth-child(3n) { border-right: none; }
+.page-card-en {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: #bbb;
+  margin-bottom: 12px;
+}
+.page-card-ja {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+  line-height: 1.55;
+}
+.page-card-desc {
+  font-size: 11px;
+  font-weight: 400;
+  color: #999;
+  line-height: 1.9;
+}
+.page-card-arrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: #f04a00;
+  margin-top: 24px;
+}
+.page-wrap { position: relative; overflow: hidden; }
+.bg-sketch {
+  position: absolute;
+  bottom: 12%;
+  left: -6%;
+  width: 60%;
+  opacity: 0.15;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  z-index: 0;
+}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+<img class="bg-sketch" src="key/IMG_5547_w.jpeg" alt="">
+
+<nav>
+<button class="hamburger" aria-label="メニュー" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
+  <div class="nav-bottom">
+    <a class="nav-logo" href="/">IKUKO<br>NAKAJIMA</a>
+  </div>
+  <div class="nav-top">
+    <ul class="nav-links">
+      <li><a href="/concept">Concept</a></li>
+      <li><a href="/outputs">Profile</a></li>
+      <li class="nav-case"><a href="/case1">Case 1</a><span class="nav-case-ja">三条マルシェ</span></li>
+      <li class="nav-case"><a href="/case2">Case 2</a><span class="nav-case-ja">デザイン論</span></li>
+      <li class="nav-case"><a href="/documentation">Case 3</a><span class="nav-case-ja">ドキュメンテーション</span></li>
+      <li class="nav-case"><a href="/project">Works</a><span class="nav-case-ja">Works</span></li>
+      <li><a href="/contact" aria-label="お問い合わせ" style="display:flex;align-items:center;"><svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.75" y="0.75" width="15.5" height="11.5" rx="1.25" stroke="currentColor" stroke-width="1.2"/><polyline points="0.75,0.75 8.5,7.5 16.25,0.75" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" fill="none"/></svg></a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="hero-img-wrap">
+  <img class="hero-img" src="key/IMG_0396.jpg" alt="デザイン環世界">
+</div>
+<p style="font-family: 'Inter', sans-serif; font-size: 11px; color: #aaa; letter-spacing: 0.08em; padding: 0 48px 0 48px; text-align: right;">リアルタイムドキュメンテーション（日本デザイン学会 第16回第一支部秋季研究大会 in 三条マルシェ・2025）</p>
+
+<div class="hero-text">
+  <div class="hero-catchcopy">デザインは人をしあわせにする技術である。</div>
+  <div class="hero-right">
+    <div class="hero-accent"></div>
+    <div class="hero-name">中島郁子</div>
+    <div class="hero-name-en" style="margin-bottom: 4px;">Ikuko Nakajima</div>
+    <div style="font-family: 'BIZ UDPGothic', sans-serif; font-size: 13px; color: #888; letter-spacing: 0.06em; margin-bottom: 32px;">デザイン学研究者</div>
+    <p class="hero-lead">実践者と研究者の間を往還し、「デザイン環世界」を媒介しながら状況を読み解き、<br>誰もが楽しめる「お砂場」——あらゆる方向に開かれた場——を創造しながら、新たなデザイン的価値を探求する。</p>
+  </div>
+</div>
+
+<div class="pages-grid">
+  <a class="page-card" href="/outputs" style="--card-bg: url(key/IMG_2172.jpg)">
+    <div class="page-card-en">Profile</div>
+    <div class="page-card-ja">Profile</div>
+    <div class="page-card-desc">略歴・論文リストほか</div>
+    <div class="page-card-arrow">→</div>
+  </a>
+  <a class="page-card" href="/case1" style="--card-bg: url(key/DSCN5228.JPG)">
+    <div class="page-card-en">Case 1 — Sanjo Marche</div>
+    <div class="page-card-ja">事例１ 三条マルシェ</div>
+    <div class="page-card-desc">地域コミュニティと共に歩み続けるデザイン実践</div>
+    <div class="page-card-arrow">→</div>
+  </a>
+  <a class="page-card" href="/case2" style="--card-bg: url(key/IMG_6248.jpg)">
+    <div class="page-card-en">Case 2 — Lectures</div>
+    <div class="page-card-ja">事例２ デザイン論</div>
+    <div class="page-card-desc">講義レジュメ集</div>
+    <div class="page-card-arrow">→</div>
+  </a>
+  <a class="page-card" href="/documentation" style="--card-bg: url(key/IMG_0260.jpg)">
+    <div class="page-card-en">Case 3 — Documentation</div>
+    <div class="page-card-ja">事例３ ドキュメンテーション</div>
+    <div class="page-card-desc">状況を記録し、自己を省察するツール</div>
+    <div class="page-card-arrow">→</div>
+  </a>
+  <a class="page-card" href="/project" style="--card-bg: url(key/DSC_0581.JPG)">
+    <div class="page-card-en">Works</div>
+    <div class="page-card-ja">Works</div>
+    <div class="page-card-arrow">→</div>
+  </a>
+  <a class="page-card" href="/contact" style="--card-bg: url(key/DSC_2746.JPG)">
+    <div class="page-card-en">Contact</div>
+    <div class="page-card-ja">お問い合わせ</div>
+    <div class="page-card-desc">講義・共同研究・ワークショップ・講演のご相談</div>
+    <div class="page-card-arrow">→</div>
+  </a>
+</div>
+
+<footer>
+  <div class="footer-name">中島郁子</div>
+  <div class="footer-copy">© 2026 Ikuko Nakajima</div>
+</footer>
+
+</div><!-- /.page-wrap -->
+
+<script>
+function toggleNav(btn) {
+  btn.classList.toggle('active');
+  document.querySelector('.nav-top').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case 1 — 三条マルシェ — 中島郁子</title>
+<meta name="description" content="Case 1: Sanjo Marche — Ikuko Nakajima's long-running design practice with a community market in Niigata, integrating practitioner involvement and academic research.">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="三条マルシェ — 中島郁子">
+<meta property="og:description" content="地域コミュニティと共に歩み続けるデザイン実践">
+<meta property="og:url" content="https://ikukonakajima.jp/case1">
+<meta property="og:image" content="https://ikukonakajima.jp/key/IMG_0396.jpg">
+<meta property="og:locale" content="ja_JP">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="三条マルシェ — 中島郁子">
+<meta name="twitter:description" content="地域コミュニティと共に歩み続けるデザイン実践">
+<meta name="twitter:image" content="https://ikukonakajima.jp/key/IMG_0396.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Inter:wght@200;400;900&family=Noto+Sans+JP:wght@400;900&family=Shippori+Mincho+B1:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/common.css">
+<style>
+/* Background sketch */
+.bg-sketch {
+  position: absolute;
+  bottom: 10%;
+  right: -4%;
+  width: 50%;
+  opacity: 0.08;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  z-index: 0;
+}
+
+/* Content */
+.page-body {
+  padding: 40px 48px 64px 48px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Illustration block */
+.illust-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: end;
+  margin-bottom: 56px;
+}
+.illust-img { width: 100%; display: block; }
+.illust-caption {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 13px;
+  line-height: 2.2;
+  color: #555;
+  letter-spacing: 0.04em;
+  padding-top: 8px;
+}
+.illust-caption em {
+  display: block;
+  font-style: normal;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 900;
+  color: #1a1a1a;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Section head */
+.section-head {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  color: #bbb;
+  text-transform: uppercase;
+  padding: 48px 0 0 0;
+  border-top: 2px solid #1a1a1a;
+  margin-top: 48px;
+}
+.section-head:first-child {
+  margin-top: 0;
+  border-top: none;
+  padding-top: 0;
+}
+.section-title {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+.section-desc {
+  font-size: 13px;
+  line-height: 2.2;
+  color: #555;
+  letter-spacing: 0.04em;
+  max-width: 680px;
+  margin-bottom: 20px;
+}
+
+/* Stats */
+.stats-block {
+  background: #f9f9f9;
+  border-left: 3px solid var(--accent);
+  padding: 24px 28px;
+  margin: 24px 0;
+  max-width: 680px;
+}
+.stats-block p {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 13px;
+  line-height: 2.2;
+  color: #444;
+  letter-spacing: 0.03em;
+}
+.stats-nums {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.stat-item { ; }
+.stat-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: #1a1a1a;
+  line-height: 1;
+}
+.stat-label {
+  font-size: 11px;
+  color: #999;
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+}
+
+/* Photo grid */
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 24px 0;
+}
+.photo-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin: 24px 0;
+}
+.photo-grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 12px;
+  margin: 24px 0;
+}
+.photo-grid img,
+.photo-grid-3 img,
+.photo-grid-4 img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  background: #f5f5f5;
+}
+.photo-caption {
+  font-size: 11px;
+  color: #aaa;
+  letter-spacing: 0.06em;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+/* Timeline */
+.timeline { margin-top: 24px; }
+.timeline-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 24px;
+  border-top: 1px solid #e8e8e8;
+  padding: 20px 0;
+}
+.timeline-item:last-child { border-bottom: 1px solid #e8e8e8; }
+.timeline-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: #bbb;
+  text-transform: uppercase;
+  padding-top: 2px;
+  line-height: 1.6;
+}
+.timeline-label strong {
+  display: block;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #444;
+  text-transform: none;
+  margin-bottom: 4px;
+}
+.timeline-body {
+  font-size: 13px;
+  line-height: 2.2;
+  color: #555;
+  letter-spacing: 0.03em;
+}
+
+/* Coming soon note */
+.coming-soon {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: #bbb;
+  text-transform: uppercase;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+</style>
+</head>
+<body>
+
+<img class="bg-sketch" src="key/IMG_0177.jpeg" alt="">
+
+<nav>
+<button class="hamburger" aria-label="メニュー" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
+  <div class="nav-bottom">
+    <a class="nav-logo" href="/">IKUKO<br>NAKAJIMA</a>
+  </div>
+  <div class="nav-top">
+    <ul class="nav-links">
+      <li><a href="/concept">Concept</a></li>
+      <li><a href="/outputs">Profile</a></li>
+      <li class="nav-case"><a href="/case1" class="active">Case 1</a><span class="nav-case-ja">三条マルシェ</span></li>
+      <li class="nav-case"><a href="/case2">Case 2</a><span class="nav-case-ja">デザイン論</span></li>
+      <li class="nav-case"><a href="/documentation">Case 3</a><span class="nav-case-ja">ドキュメンテーション</span></li>
+      <li class="nav-case"><a href="/project">Works</a><span class="nav-case-ja">Works</span></li>
+      <li><a href="/contact" aria-label="お問い合わせ" style="display:flex;align-items:center;"><svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.75" y="0.75" width="15.5" height="11.5" rx="1.25" stroke="currentColor" stroke-width="1.2"/><polyline points="0.75,0.75 8.5,7.5 16.25,0.75" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" fill="none"/></svg></a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-en">三条マルシェ</div>
+  <div class="page-header-ja">Case 1 — Sanjo Marche</div>
+</div>
+
+<div class="page-body">
+
+  <!-- 1. Illustration -->
+  <div class="illust-wrap">
+    <img class="illust-img" src="key/DSC_1229_Original.JPG" alt="参与観察メモ手描きイラスト">
+    <div class="illust-caption">
+      <em>地域コミュニティと共に歩み続けるデザイン実践</em>
+      実行委員として運営し、研究者として構造を記述する。二つの立場は矛盾しない。同じ場に、異なる解像度で関与し続けている。
+    </div>
+  </div>
+
+  <div class="section-head" style="margin-top: 0; border-top: none; padding-top: 0;">Overview</div>
+  <p class="section-desc" style="font-size: 15px; color: #1a1a1a; font-weight: 700; line-height: 2;">三条マルシェの魅力と熱量に、デザイン知のあらたな価値を見い出し、研究と実践を続けている。</p>
+
+  <!-- 3. 概要・数値データ -->
+  <p class="section-desc">人気のない中心市街地に、突如にぎやかなまちが現れ、5時間後、蜃気楼のように消える。2010年9月の第1回開催以来、人口約10万人の都市で来場者数最大98,000人（2013年10月）を記録したこともある、地域を代表するイベントである。会場は毎回異なり、市内商店街やランドマークを巡回して開催される。３１１を乗り越えコロナ禍でも存続している。主に市民ボランティアによる三条マルシェ実行委員会が運営する。</p>
+
+  <div class="stats-block">
+    <div class="stats-nums">
+      <div class="stat-item">
+        <div class="stat-num">96回</div>
+        <div class="stat-label">通算開催回数（2025年11月現在）</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">約177万人</div>
+        <div class="stat-label">累計来場者数</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">177店</div>
+        <div class="stat-label">最多出店数（2017年7月）</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">98,000人</div>
+        <div class="stat-label">最多来場者数（2013年10月）</div>
+      </div>
+    </div>
+    <p style="font-size:11px; color:#aaa; letter-spacing:0.06em; margin-top:12px; text-align:right;">※ 2025年度まで</p>
+  </div>
+
+  <!-- Photos row 1 -->
+  <div class="photo-grid-4">
+    <img src="marche/IMG_5832.jpeg" alt="三条マルシェの様子">
+    <img src="marche/IMG_1241.jpg" alt="三条マルシェ会場">
+    <img src="marche/DSC_3515.JPG" alt="三条マルシェ">
+    <img src="marche/DSC_3391.JPG" alt="三条マルシェ会場の様子">
+  </div>
+
+  <!-- 4. 場の記述 -->
+  <div class="section-head">Scene</div>
+  <div class="section-title">「ちょっとだけ、理想のまち」</div>
+  <p class="section-desc">マルシェには人々が「ハレ」の場を楽しみにやってくる。目新しいグルメや手の込んだ品々を吟味しながら、会場のあちこちで挨拶が交わされる。子どもたちもおしゃれをしてやってくる。彼らにとっては、生まれた時からある「にぎやかなまち」なのだ。</p>
+  <p class="section-desc">高校生ボランティアが委員となって１０年以上も従事している。もちろん、立ち上げ時からのメンバーも多数在籍している。ちょっと前に居住してきた若者や市内の大学生も手伝いに来る。来場者だけではなく、運営側の熱気も尋常ではない。ステージではライブやダンス、パフォーマンスが繰り広げられ、部活や習い事の発表会、素人プロレスやチンドン屋など毎回毎回新コンテンツがやってくる。結婚式まで開催されたことがある。警察、消防、陸上自衛隊も常連さんだ。</p>
+  <p class="section-desc">マルシェは決して「まつり」ではない。しかし日常の商店街でもない。関わる全員がちょっとだけ「理想のまち」を創ろうとしている。「理想の市民」をふるまっているのかもしれない。</p>
+
+  <!-- Photos row 2 -->
+  <div class="photo-grid">
+    <img src="marche/DSC_3402.JPG" alt="三条マルシェの様子">
+    <img src="marche/DSCF7409.JPG" alt="三条マルシェ会議">
+  </div>
+
+  <!-- 5. 環世界の考察 -->
+  <div class="section-head">Research</div>
+  <div class="section-title">「マルシェ的環世界」の概念化</div>
+  <p class="section-desc">三条マルシェの構造を「マルシェ的環世界」として概念化し、デザイン学研究として論文化・学会発表を続けている。2023年、日本デザイン学会第一支部大会を三条マルシェ会場で開催し、研究者・実行委員・来場者が同じ場に交差した。</p>
+  <div class="photo-grid">
+    <img src="marche/DSC_0516.jpg" alt="日本デザイン学会第一支部大会">
+    <img src="marche/DSC_0532.jpg" alt="学会の様子">
+  </div>
+  <div style="margin-top: 20px; border-top: 1px solid #f0f0f0; padding-top: 16px; display: flex; flex-direction: column; gap: 10px;">
+    <div style="display: grid; grid-template-columns: 48px 1fr; gap: 16px; align-items: baseline;">
+      <div style="font-family: 'Inter', sans-serif; font-size: 10px; color: #ccc; letter-spacing: 0.06em;">2023</div>
+      <div style="font-size: 12px; color: #888; line-height: 1.7; letter-spacing: 0.03em;">地域コミュニティイベント「三条マルシェ」における運営実行プロセスを再設計するデザイン実践 <a href="https://www.jstage.jst.go.jp/article/jssd/70/0/70_218/_pdf/-char/en" target="_blank" style="font-family: 'Inter', sans-serif; font-size: 10px; color: #bbb; text-decoration: none; letter-spacing: 0.08em; margin-left: 6px;">PDF →</a></div>
+    </div>
+    <div style="display: grid; grid-template-columns: 48px 1fr; gap: 16px; align-items: baseline;">
+      <div style="font-family: 'Inter', sans-serif; font-size: 10px; color: #ccc; letter-spacing: 0.06em;">2016</div>
+      <div style="font-size: 12px; color: #888; line-height: 1.7; letter-spacing: 0.03em;">市民とデザイナーが共に創出した「ことのデザイン」 <a href="https://www.jstage.jst.go.jp/article/jssd/63/0/63_8/_article/-char/ja/" target="_blank" style="font-family: 'Inter', sans-serif; font-size: 10px; color: #bbb; text-decoration: none; letter-spacing: 0.08em; margin-left: 6px;">PDF →</a></div>
+    </div>
+    <div style="margin-top: 4px;">
+      <a href="https://jssd.jp/11582" target="_blank" style="color: #bbb; text-decoration: none; letter-spacing: 0.14em; font-size: 10px; font-family: 'Inter', sans-serif; text-transform: uppercase;">学会記事 →</a>
+      <span style="color: #ddd; margin: 0 8px;">/</span>
+      <span style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.14em; color: #bbb; text-transform: uppercase;">note — 準備中</span>
+    </div>
+  </div>
+
+  <!-- 6. 実践のようす -->
+  <div class="section-head">Practice</div>
+  <div class="section-title">現場を支える、即興的な問題解決</div>
+  <p class="section-desc">10代から70代、異なる職種のボランティアが運営を担う。月1回の実行委員会会議は深夜まで及ぶことがある。テント設営・バミはり・ミセツケ・ゴミ分別——すべてのタスクに熟達した、10年選手のイベントプロたちがいる。欲しいものはすぐに誰かが作る。ものづくりのまちならではの即興的な問題解決が、現場を支えている。</p>
+
+  <div class="photo-grid">
+    <img src="marche/DSC_2836.JPG" alt="マルシェ現場の様子">
+    <img src="marche/DSC_2909.JPG" alt="マルシェ運営">
+  </div>
+
+  <!-- TODO: noteコンテンツ準備後に復活
+  <p class="coming-soon">note — 準備中</p>
+  -->
+
+  <!-- 7. 立ち上げ〜一時休止〜再起動 -->
+  <div class="section-head">History</div>
+  <div class="section-title">立ち上げ〜一時休止〜再起動</div>
+
+  <div style="margin-bottom: 24px;">
+    <div style="display: grid; grid-template-columns: 80px 1fr; border-top: 1px solid #e8e8e8; padding: 12px 0; gap: 24px; align-items: start;">
+      <div style="font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 400; color: #bbb; letter-spacing: 0.04em; padding-top: 2px;">2010</div>
+      <div style="font-size: 13px; line-height: 1.9; color: #555; letter-spacing: 0.03em;">実行委員として立ち上げに参画。初期のポスター・チラシ・情報デザインツールを制作。</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 80px 1fr; border-top: 1px solid #e8e8e8; padding: 12px 0; gap: 24px; align-items: start;">
+      <div style="font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 400; color: #bbb; letter-spacing: 0.04em; padding-top: 2px;">2011</div>
+      <div style="font-size: 13px; line-height: 1.9; color: #555; letter-spacing: 0.03em;">311をきっかけにデザインよりも実践に重心を置くようになった。</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 80px 1fr; border-top: 1px solid #e8e8e8; padding: 12px 0; gap: 24px; align-items: start;">
+      <div style="font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 400; color: #bbb; letter-spacing: 0.04em; padding-top: 2px;">2012</div>
+      <div style="font-size: 13px; line-height: 1.9; color: #555; letter-spacing: 0.03em;">三条市役所にて1年間従事。</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 80px 1fr; border-top: 1px solid #e8e8e8; padding: 12px 0; gap: 24px; align-items: start;">
+      <div style="font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 400; color: #bbb; letter-spacing: 0.04em; padding-top: 2px;">2013–2015</div>
+      <div style="font-size: 13px; line-height: 1.9; color: #555; letter-spacing: 0.03em;">退職後、三条市「新たな魅力創造事業」を立ち上げ、デザイン系大学生との交流プロジェクトを実施。</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 80px 1fr; border-top: 1px solid #e8e8e8; padding: 12px 0; gap: 24px; align-items: start;">
+      <div style="font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 400; color: #bbb; letter-spacing: 0.04em; padding-top: 2px;">2016–2022</div>
+      <div style="font-size: 13px; line-height: 1.9; color: #555; letter-spacing: 0.03em;">拠点を東京に移し研究活動を開始。関与の密度が下がる時期が続いた。</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 80px 1fr; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; padding: 12px 0; gap: 24px; align-items: start;">
+      <div style="font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 400; color: #bbb; letter-spacing: 0.04em; padding-top: 2px;">2023–</div>
+      <div style="font-size: 13px; line-height: 1.9; color: #555; letter-spacing: 0.03em;">前委員長の誘いを受け本格復帰。コロナ禍で研究の機会を奪われた時期を経て、原点回帰の意図もあった。学会との接続を試みながら、現在は実行委員・研究者の両軸で関与を続けている。</div>
+    </div>
+  </div>
+  <div style="margin-top: 8px; display: flex; gap: 12px; align-items: flex-end;">
+    <img src="marche/0307_南相馬マルシェB5.jpg" style="width: 72px; flex-shrink: 0; display: block; cursor: zoom-in;" onclick="document.getElementById('poster-modal').style.display='flex'">
+    <p style="font-size: 11px; color: #aaa; letter-spacing: 0.04em; line-height: 1.8;">2010_2011ポスターを制作。役所や出店者たちの似顔絵が、イベントへの共感を得るツールとなった。写真は2012年南相馬市復興イベントへの応援出店時のもの</p>
+  </div>
+
+  <div id="poster-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1000; align-items:center; justify-content:center; cursor:zoom-out;" onclick="this.style.display='none'">
+    <img src="marche/0307_南相馬マルシェB5.jpg" style="max-height:90vh; max-width:90vw; display:block;">
+  </div>
+
+  <!-- TODO: noteコンテンツ準備後に復活
+  <p class="coming-soon">note — 準備中</p>
+  -->
+
+</div>
+
+<footer>
+  <div class="footer-name">中島郁子</div>
+  <div class="footer-copy">© 2026 Ikuko Nakajima</div>
+</footer>
+
+
+<script>
+function toggleNav(btn) {
+  btn.classList.toggle('active');
+  document.querySelector('.nav-top').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case 2 — Lectures — 中島郁子</title>
+<meta name="description" content="Lectures — Ikuko Nakajima's design literacy courses helping students develop their own critical perspective on design in everyday life.">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="デザイン論 — 中島郁子">
+<meta property="og:description" content="領域横断的なデザイン知を提案する講義">
+<meta property="og:url" content="https://ikukonakajima.jp/case2">
+<meta property="og:image" content="https://ikukonakajima.jp/key/IMG_0396.jpg">
+<meta property="og:locale" content="ja_JP">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="デザイン論 — 中島郁子">
+<meta name="twitter:description" content="領域横断的なデザイン知を提案する講義">
+<meta name="twitter:image" content="https://ikukonakajima.jp/key/IMG_0396.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Inter:wght@200;400;900&family=Noto+Sans+JP:wght@400;900&family=Shippori+Mincho+B1:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/common.css">
+<style>
+/* Background sketch */
+.bg-sketch {
+  position: absolute;
+  top: 80px;
+  left: -6%;
+  width: 55%;
+  opacity: 0.12;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  z-index: 0;
+}
+
+/* Content */
+.page-body {
+  padding: 40px 48px 64px 48px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section head */
+.section-head {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  color: #bbb;
+  text-transform: uppercase;
+  padding: 48px 0 0 0;
+  border-top: 2px solid #1a1a1a;
+  margin-top: 48px;
+}
+
+/* Lead */
+.lead-text {
+  font-size: clamp(15px, 1.6vw, 18px);
+  line-height: 2.3;
+  color: #1a1a1a;
+  letter-spacing: 0.04em;
+  margin-top: 32px;
+}
+
+/* Statements */
+.statements {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid #e8e8e8;
+}
+.statement-item {
+  font-size: 13px;
+  line-height: 2.2;
+  color: #555;
+  letter-spacing: 0.04em;
+  padding: 14px 0 14px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  border-left: 2px solid transparent;
+}
+.statement-item:first-child {
+  border-left-color: var(--accent);
+  color: #1a1a1a;
+  font-size: 17px;
+}
+
+/* Themes */
+.themes {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.theme-item { border-top: 1px solid #e8e8e8; padding: 40px 0; }
+.theme-title {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: clamp(17px, 2vw, 22px);
+  font-weight: 900;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  border-left: 2px solid var(--accent);
+  padding-left: 12px;
+}
+.theme-img {
+  width: 100%;
+  max-width: 680px;
+  display: block;
+  margin-bottom: 20px;
+  border: 1px solid #e8e8e8;
+}
+.theme-desc {
+  font-size: 13px;
+  line-height: 2.2;
+  color: #555;
+  letter-spacing: 0.03em;
+}
+
+/* Supplementary themes */
+.themes-sub {
+  border-top: 1px solid #e8e8e8;
+  padding: 24px 0 0 92px;
+  font-size: 11px;
+  line-height: 2.1;
+  color: #aaa;
+  letter-spacing: 0.03em;
+}
+
+/* Process */
+.process-items {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.process-item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  border-top: 1px solid #e8e8e8;
+  padding: 20px 0;
+  gap: 32px;
+  align-items: start;
+}
+.process-step {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: #ccc;
+  text-transform: uppercase;
+  padding-top: 3px;
+}
+.process-step span {
+  display: block;
+  font-size: 18px;
+  font-weight: 900;
+  color: #e8e8e8;
+  letter-spacing: 0;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+.process-content { ; }
+.process-title {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+.process-desc {
+  font-size: 13px;
+  line-height: 2.1;
+  color: #666;
+  letter-spacing: 0.03em;
+}
+</style>
+</head>
+<body>
+
+<img class="bg-sketch" src="key/5050.jpeg" alt="">
+
+<nav>
+<button class="hamburger" aria-label="メニュー" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
+  <div class="nav-bottom">
+    <a class="nav-logo" href="/">IKUKO<br>NAKAJIMA</a>
+  </div>
+  <div class="nav-top">
+    <ul class="nav-links">
+      <li><a href="/concept">Concept</a></li>
+      <li><a href="/outputs">Profile</a></li>
+      <li class="nav-case"><a href="/case1">Case 1</a><span class="nav-case-ja">三条マルシェ</span></li>
+      <li class="nav-case"><a href="/case2" class="active">Case 2</a><span class="nav-case-ja">デザイン論</span></li>
+      <li class="nav-case"><a href="/documentation">Case 3</a><span class="nav-case-ja">ドキュメンテーション</span></li>
+      <li class="nav-case"><a href="/project">Works</a><span class="nav-case-ja">Works</span></li>
+      <li><a href="/contact" aria-label="お問い合わせ" style="display:flex;align-items:center;"><svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.75" y="0.75" width="15.5" height="11.5" rx="1.25" stroke="currentColor" stroke-width="1.2"/><polyline points="0.75,0.75 8.5,7.5 16.25,0.75" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" fill="none"/></svg></a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-en">Lectures</div>
+  <div class="page-header-ja">講義</div>
+</div>
+
+<div class="page-body">
+
+  <p class="lead-text">ビジネス・研究・実践を往還して体系化した知見から、領域横断的なデザイン知を提案する。<br>「自分をとりまくデザイン」を読み解き、現場への実装を目指す。</p>
+
+  <div class="section-head">Principles</div>
+
+  <div class="process-items">
+    <div class="process-item">
+      <div class="process-step"><span>01</span></div>
+      <div class="process-content">
+        <div class="process-title">自分の生活世界は、ありとあらゆる「デザイン」に囲まれている。</div>
+        <p class="process-desc">デザイン要素はすべて、何らかの関係性を持っている。<br>時系列、工程、流通、マーケットニーズ、コスト——それらが絡み合い、一つの系をなしている。<br>つながり、循環する系を「デザイン環世界」と呼ぶ。</p>
+      </div>
+    </div>
+    <div class="process-item">
+      <div class="process-step"><span>02</span></div>
+      <div class="process-content">
+        <div class="process-title">ディスコミュニケーション</div>
+        <p class="process-desc">世の中のデザインは、すべてが完璧に完成されたものではない。<br>デザインは人を疎外することがある。ときに危害にまで至る。<br>デザイン環世界におけるコミュニケーション不全ー故障、断線、メンテナンス不足ーを探し、修理しよう。</p>
+      </div>
+    </div>
+    <div class="process-item">
+      <div class="process-step"><span>03</span></div>
+      <div class="process-content">
+        <div class="process-title">デザイナーは、同時に生活者でもある。</div>
+        <p class="process-desc">自分独自の判断基準を構築し、「デザインの目利き」になろう。<br>自分自身の言葉で、あなたにしかできないナラティブを話してほしい。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-head">Themes</div>
+
+  <div class="themes">
+
+    <div class="theme-item">
+        <div class="theme-title">ディスコミュニケーション</div>
+        <img class="theme-img" src="key/スクリーンショット 2026-03-26 午後1.53.22.png" alt="ディスコミュニケーション">
+        <p class="theme-desc">まちを少し歩くだけで、わかりにくい標識、不愉快な広告表現、誰かを排除するベンチ、消えかけた案内表示に出会う。<br>デザイン成果物とユーザのあいだで、コミュニケーションがどこかで断絶している。<br>誰が疎外されているのか。なぜそのような事態が起きるのか。状況に隠された社会課題とは何か。<br>自分で撮影した写真を一次資料として、考察と議論を重ねる。</p>
+    </div>
+
+    <div class="theme-item">
+        <div class="theme-title">共感をデザインする</div>
+        <img class="theme-img" src="key/IMG_6258.jpeg" alt="共感をデザインする">
+        <p class="theme-desc">製品やサービスに対したとき、人は自分がユーザかどうかを瞬時に判断する。<br>極めてコアな層に熱狂的に受け入れられるデザインから、誰をも疎外しないデザインまで<br>——共感が生まれるプロセスと、その設計可能性を考察する。<br>ディスコミュニケーションの対極として位置づけ、議論する。</p>
+    </div>
+
+    <div class="theme-item">
+        <div class="theme-title">つながるデザイン</div>
+        <img class="theme-img" src="key/DSC_1236_Original.JPG" alt="つながるデザイン">
+        <p class="theme-desc">一本のボールペンを手に取る。ロゴ、フォント、カラーリング、握り心地、パッケージ、流通箱の記号<br>——誰もが日常的に使う廉価な製品の中に、複数の領域にまたがるデザインが共存している。<br>製品内だけでは完結しない。開発から廃棄・リサイクルまで、各要素が枝分かれしながら循環する構造＝デザイン環世界を読み解く。</p>
+    </div>
+
+    <div class="theme-item">
+        <div class="theme-title">わたしのまちのデザイン</div>
+        <img class="theme-img" src="key/スクリーンショット 2026-03-26 午後1.37.16.png" alt="わたしのまちのデザイン">
+        <p class="theme-desc">自分が育った、あるいは住むまちに思い入れのない人はいない。「ジモト」を出発点に、デザインがまちの中で実際に機能しているさまを観察し、固有のナラティブを構築して語る。発表者の数だけ、知らない土地を訪問できる。100%当事者として語ることが、最も強いプレゼンテーションの訓練となる。</p>
+    </div>
+
+    <div class="theme-item">
+        <div class="theme-title">おいしいデザイン</div>
+        <img class="theme-img" src="key/スクリーンショット 2026-03-26 午後1.34.21.png" alt="おいしいデザイン">
+        <p class="theme-desc">スイーツを自分で選び、購入し、観察し、食べる。購入動機は何か。商品を魅力的に見せているデザイン要素はどこか。期待と実食の差異はあったか。強い動機に裏付けられた体験から、ブランディング・マーケティング・記号論まで接続する。廉価な量産品の「引き算のデザイン」が持つ高い技術にも注目する。</p>
+    </div>
+
+  </div>
+
+  <p class="themes-sub">そのほかのテーマとして、「わたしの世界をデザインする」（地域コミュニティデザインの実践）、「かわいいデザイン」（内面世界の探索）、「わたしのイメージをデザイン」（キーワードからのリアルタイムイメージ制作）、「わたしのデザインをデザインする」（自作品のプレゼンテーションとリフレクション）を扱う。</p>
+
+  <div class="section-head">Process</div>
+
+  <div class="process-items">
+    <div class="process-item">
+      <div class="process-step"><span>01</span></div>
+      <div class="process-content">
+        <div class="process-title">知る</div>
+        <p class="process-desc">自分をとりまくデザインに、あらためて気づく。日常の中に潜む多種多様な要素と関係性を発見する。</p>
+      </div>
+    </div>
+    <div class="process-item">
+      <div class="process-step"><span>02</span></div>
+      <div class="process-content">
+        <div class="process-title">探す</div>
+        <p class="process-desc">身近なモチーフを起点に、ミクロからマクロへ視点を動かす。フィールドワークと観察を通じて、情報を自力で集める。</p>
+      </div>
+    </div>
+    <div class="process-item">
+      <div class="process-step"><span>03</span></div>
+      <div class="process-content">
+        <div class="process-title">分析・アーカイブする</div>
+        <p class="process-desc">集めた情報を構造化し、記録する。要素がどうつながり、何が欠けているかを考察する。</p>
+      </div>
+    </div>
+    <div class="process-item">
+      <div class="process-step"><span>04</span></div>
+      <div class="process-content">
+        <div class="process-title">独自の価値判断を構築する</div>
+        <p class="process-desc">他者の視点と議論を経て、自分の評価基準をつくる。「良い・悪い」を自分の語彙で説明できるようになる。</p>
+      </div>
+    </div>
+    <div class="process-item">
+      <div class="process-step"><span>05</span></div>
+      <div class="process-content">
+        <div class="process-title">制作と生活に活かす</div>
+        <p class="process-desc">講義で得た知を、作品制作とデザイナーとしての日常に持ち帰る。学びは教室の外で続く。</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-name">中島郁子</div>
+  <div class="footer-copy">© 2026 Ikuko Nakajima</div>
+</footer>
+
+
+<script>
+function toggleNav(btn) {
+  btn.classList.toggle('active');
+  document.querySelector('.nav-top').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
