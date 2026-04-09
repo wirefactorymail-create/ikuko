@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>略歴 詳細 — 中島郁子</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Inter:wght@200;400;900&family=Noto+Sans+JP:wght@400;900&family=Shippori+Mincho+B1:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/common.css">
+<style>
+/* Section head */
+.section-head {
+  padding: 40px 0 24px 0;
+  border-top: 1px solid #e8e8e8;
+  margin-top: 40px;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+.section-head:first-child {
+  margin-top: 0;
+  border-top: none;
+  padding-top: 16px;
+}
+.section-head-ja {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #999;
+  position: relative;
+  padding-left: 12px;
+}
+.section-head-ja::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.5px;
+  height: 100%;
+  background: var(--accent);
+}
+
+/* List */
+.outputs-list { padding: 0 48px 48px 48px; }
+.year-block {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  padding: 16px 0;
+  gap: 32px;
+}
+.year-label {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(18px, 2.5vw, 28px);
+  font-weight: 900;
+  color: #ddd;
+  line-height: 1;
+  padding-top: 4px;
+}
+.year-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.entry {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Category label */
+.entry-cat {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #bbb;
+  line-height: 1;
+}
+.entry-cat.research { color: #c84000; }
+.entry-cat.book { color: #0055cc; }
+.entry-cat.activity { color: #888; }
+.entry-venue {
+  font-size: 11px;
+  color: #444;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+.entry-venue.research { color: #c84000; }
+.entry-venue.book { color: #0055cc; }
+.entry-title {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: #1a1a1a;
+}
+.entry-caption {
+  font-size: 11px;
+  color: #999;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  margin-top: 2px;
+}
+
+/* Background sketch */
+.bg-sketch {
+  position: absolute;
+  top: 30%;
+  right: -10%;
+  width: 62%;
+  opacity: 0.15;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .outputs-list { padding: 24px 16px 40px !important; }
+}
+</style>
+</head>
+<body>
+
+<img class="bg-sketch" src="key/5050.jpeg" alt="">
+
+<nav>
+<button class="hamburger" aria-label="メニュー" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
+  <div class="nav-bottom">
+    <a class="nav-logo" href="/">IKUKO<br>NAKAJIMA</a>
+  </div>
+  <div class="nav-top">
+    <ul class="nav-links">
+      <li><a href="/concept">Concept</a></li>
+      <li><a href="/outputs" class="active">Profile</a></li>
+      <li class="nav-case"><a href="/case1">Case 1</a><span class="nav-case-ja">三条マルシェ</span></li>
+      <li class="nav-case"><a href="/case2">Case 2</a><span class="nav-case-ja">デザイン論</span></li>
+      <li class="nav-case"><a href="/documentation">Case 3</a><span class="nav-case-ja">ドキュメンテーション</span></li>
+      <li class="nav-case"><a href="/project">Works</a><span class="nav-case-ja">Works</span></li>
+      <li><a href="/contact" aria-label="お問い合わせ" style="display:flex;align-items:center;"><svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.75" y="0.75" width="15.5" height="11.5" rx="1.25" stroke="currentColor" stroke-width="1.2"/><polyline points="0.75,0.75 8.5,7.5 16.25,0.75" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" fill="none"/></svg></a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-en" style="margin-bottom: -0.2em;">Works</div>
+  <div class="page-header-ja" style="margin-bottom: 8px;">研究発表と主な活動</div>
+</div>
+
+<div class="outputs-list">
+
+  <div class="year-block" style="margin-top: 24px;">
+    <div class="year-label">2025</div>
+    <div class="year-entries">
+      <div class="entry">
+        <div class="entry-cat research">Research</div>
+        <div class="entry-venue research">日本デザイン学会誌特集号 第32巻1号</div>
+        <div class="entry-title">Info-Dの〈デザイン環世界〉を描く——ドキュメンテーションによる実践知と構造的余白の可視化</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat research">Research</div>
+        <div class="entry-venue research">日本デザイン学会第72回春季研究発表大会</div>
+        <div class="entry-title">わかるために描く：デザイン環世界を描き出すための構造的アプローチ</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat activity">Activity</div>
+        <div class="entry-venue">日本デザイン学会第一支部 第16回秋季研究発表大会</div>
+        <div class="entry-title">〈あきないデザイン〉in 三条マルシェ　大会実行委員長</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-label">2024</div>
+    <div class="year-entries">
+      <div class="entry">
+        <div class="entry-cat research">Research</div>
+        <div class="entry-venue research">女子美術大学研究紀要 54号</div>
+        <div class="entry-title">「デザイン環世界」の探求——短期大学部デザインコース「デザイン論」の講義設計と実践</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat research">Research</div>
+        <div class="entry-venue research">日本デザイン学会第71回春季研究発表大会</div>
+        <div class="entry-title">「デザイン環世界」を描く：他者のデザイン行為を探索し動機とプロセスをリフレクティブ・ドキュメンテーションで可視化する</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-label">2023</div>
+    <div class="year-entries">
+      <div class="entry">
+        <div class="entry-cat research">Research</div>
+        <div class="entry-venue research">日本デザイン学会第70回春季研究発表大会</div>
+        <div class="entry-title">地域コミュニティイベント「三条マルシェ」における運営実行プロセスを再設計するデザイン実践</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat activity">Activity</div>
+        <div class="entry-title">「三条マルシェ」実行委員に復帰（〜現在）</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-label">2022</div>
+    <div class="year-entries">
+      <div class="entry">
+        <div class="entry-cat research">Research</div>
+        <div class="entry-venue research">日本デザイン学会第69回春季研究発表大会</div>
+        <div class="entry-title">ディスコミュニケーションデザイン：「だめデザイン」から学ぶ共感のデザイン</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-label">2021</div>
+    <div class="year-entries">
+      <div class="entry">
+        <div class="entry-cat activity">Activity</div>
+        <div class="entry-title">女子美術大学短期大学部「デザイン論」「情報デザイン論」開講</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat research">Research</div>
+        <div class="entry-venue research">日本デザイン学会第68回春季研究発表大会</div>
+        <div class="entry-title">「アーティストという迷宮」二人称から導き出した共感のデザイン</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat activity">Activity</div>
+        <div class="entry-title">美術家川上りえ 図録「Zero Gravity」「Landscape will」企画・制作</div>
+        <div class="entry-caption">文化庁「文化芸術活動の継続支援事業」。デザインの視点からアートを読み解く図録を共著。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-label">2020</div>
+    <div class="year-entries">
+      <div class="entry">
+        <div class="entry-cat research">Research</div>
+        <div class="entry-venue research">日本デザイン学会第67回春季研究発表大会</div>
+        <div class="entry-title">「共感をデザインする」</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat research">Research</div>
+        <div class="entry-venue research">日本デザイン学会第一支部 第11回秋季研究発表大会</div>
+        <div class="entry-title">「むだのデザイン」</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat activity">Activity</div>
+        <div class="entry-title">「Info-D.Fes」幹事</div>
+        <div class="entry-caption">日本デザイン学会情報デザイン部会。COVID-19下で中止となった学会コンテンツをオンラインで実施。プラットフォーム制作・当日運営などメインスタッフとして従事。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-label">2019</div>
+    <div class="year-entries">
+      <div class="entry">
+        <div class="entry-cat research">Research</div>
+        <div class="entry-venue research">日本デザイン学会第66回春季研究発表大会</div>
+        <div class="entry-title">「情報デザインツールとしての製品カタログ。10年間の変遷」</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat research">Research</div>
+        <div class="entry-venue research">日本デザイン学会第一支部 第10回秋季研究発表大会</div>
+        <div class="entry-title">「おいしいデザイン」</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat activity">Activity</div>
+        <div class="entry-title">「コアトリエ」9号 コーディネート</div>
+        <div class="entry-caption">東北工大＋宮城大＋秋田公立美大。地技を用いた生業がおりなす地域固有の事例を蒐集するプロジェクト。三条市に伝わる「六角凧」工房と凧合戦を見学、地域についてレクチャー。</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat activity">Activity</div>
+        <div class="entry-title">「経営をデザインする」講演活動</div>
+        <div class="entry-caption">三条エコノミークラブ。地場産業の若手起業家・後継者に「デザイン的な思考方法」を実践的に学ぶ場を提供。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-label">2018</div>
+    <div class="year-entries">
+      <div class="entry">
+        <div class="entry-cat research">Research</div>
+        <div class="entry-venue research">日本デザイン学会第65回春季研究発表大会</div>
+        <div class="entry-title">「地場産業発・メイドインジャパン『デザイン思考』」</div>
+        <div class="entry-caption">★ グッドプレゼンテーション賞</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat research">Research</div>
+        <div class="entry-venue research">日本デザイン学会第一支部 第9回秋季研究発表大会</div>
+        <div class="entry-title">「地もとではないデザイナーによる地域のデザインとは」</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat activity">Activity</div>
+        <div class="entry-title">「あらや大川散歩道雪まつり」ワークショップ設計＆実践 特別講義</div>
+        <div class="entry-caption">秋田公立美術大学。「ワークショップを設計するワークショップ」。地域イベントにおけるワークショップについての特別講義。講義を受けた学生たちが地域住民へワークショップを実践。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-label">2017</div>
+    <div class="year-entries">
+      <div class="entry">
+        <div class="entry-cat research">Research</div>
+        <div class="entry-venue research">日本デザイン学会第一支部 第8回秋季研究発表大会</div>
+        <div class="entry-title">「『アーティストという迷宮』の観察日記。デザイン的思考と手法はアートに何ができるのか」</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat activity">Activity</div>
+        <div class="entry-title">「樽前Arty2017」参加作家</div>
+        <div class="entry-caption">地域芸術祭「樽前Arty」（北海道・樽前小学校）。美術家川上りえの魅力をデザインの手法で観客に伝える。展示・講演・ワークショップ。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-label">2016</div>
+    <div class="year-entries">
+      <div class="entry">
+        <div class="entry-cat research">Research</div>
+        <div class="entry-venue research">日本デザイン学会第63回春季研究発表大会</div>
+        <div class="entry-title">「市民とデザイナーが共に創出した『ことのデザイン』」</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-label">2014</div>
+    <div class="year-entries">
+      <div class="entry">
+        <div class="entry-cat activity">Activity</div>
+        <div class="entry-title">「三条市地場産業工場見学ツアー」コーディネート</div>
+        <div class="entry-caption">芸術工学会（長岡造形大主催）エクスカーション。行程プランニング、現地レクチャー。</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat activity">Activity</div>
+        <div class="entry-title">「超高齢社会における農村・農家の将来像」ワークショップメンター</div>
+        <div class="entry-caption">京都工芸繊維大学 KYOTO Design Lab. ／ジュリア・カセム・フリッツ・フレンクラー（ミュンヘン工科大）。「地域の中で誰のものでもない共有地」を設定し、共創意識を育む「みんな畑」を提案。</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat activity">Activity</div>
+        <div class="entry-title">「介護ロボティクスに関する共同研究」ワークショップ メンター</div>
+        <div class="entry-caption">京都工芸繊維大学 KYOTO Design Lab. × 英国王立芸術大学院 Royal College of Art。「Dying with a Robot—一緒に死んでくれるロボット」を提案。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-label">2013</div>
+    <div class="year-entries">
+      <div class="entry">
+        <div class="entry-cat activity">Activity</div>
+        <div class="entry-title">「新たな魅力創造事業」（三条市事業）オーガナイザー</div>
+        <div class="entry-caption">三条市役所（2013–2014）。工場見学など地域の魅力に出会う大学生のための見学ツアー。参加校：東京藝術大学デザイン科／立正大学経済学部／芝浦工大デザイン科／長岡造形大学デザイン科。</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat activity">Activity</div>
+        <div class="entry-title">「我が家のひなまつりへようこそ！」ワークショップメンター</div>
+        <div class="entry-caption">ジュリア・カセム主宰（RCAヘレン・ハムリン研究センター）。世界各国のさまざまな障害を持つ方々の共同作業所とプロのデザイナーをコラボレートし、質の高いデザイングッズを生み出すプロジェクト。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-label">2010</div>
+    <div class="year-entries">
+      <div class="entry">
+        <div class="entry-cat activity">Activity</div>
+        <div class="entry-title">「三条マルシェ」立ち上げ　実行委員会アドバイザー就任（〜2012）</div>
+        <div class="entry-caption">地域イベント「三条マルシェ」に立ち上げから参加。運営タスクに従事し、デザイン的視点と技術を地域社会へ導入。</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat activity">Activity</div>
+        <div class="entry-title">「三条マルシェ」実績報告書 執筆</div>
+        <div class="entry-caption">三条市役所。地域イベント「三条マルシェ」の記録・運営マニュアル制作（全ページ執筆）。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-label">2008</div>
+    <div class="year-entries">
+      <div class="entry">
+        <div class="entry-cat book">Book</div>
+        <div class="entry-venue book">文溪堂／単著</div>
+        <div class="entry-title">針金細工</div>
+        <div class="entry-caption">針金細工の歴史、素材、製法などを小学生向けに解説。取材、執筆、レシピ開発・作品制作・作り方イラストレーション・テキスト・フォトディレクションなど。</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat book">Book</div>
+        <div class="entry-venue book">講談社／共著</div>
+        <div class="entry-title">手作り木工大図鑑</div>
+        <div class="entry-caption">木工に使われる道具についての項（約80ページ担当）取材、執筆、イラストレーション、フォトディレクションなど。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-label">2005</div>
+    <div class="year-entries">
+      <div class="entry">
+        <div class="entry-cat book">Book</div>
+        <div class="entry-venue book">祥伝社／単著</div>
+        <div class="entry-title">ワイヤー＆ビーズ</div>
+        <div class="entry-caption">ワイヤー素材を用いた工作レシピ集。レシピ開発・作品制作・作り方イラストレーション・テキスト・フォトディレクションなど。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-label">2002</div>
+    <div class="year-entries">
+      <div class="entry">
+        <div class="entry-cat book">Book</div>
+        <div class="entry-venue book">祥伝社／単著</div>
+        <div class="entry-title">ワイヤー雑貨とアクセサリー</div>
+        <div class="entry-caption">ワイヤー素材を用いた工作レシピ集。レシピ開発・作品制作・作り方イラストレーション・テキスト・フォトディレクションなど。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-label">1999</div>
+    <div class="year-entries">
+      <div class="entry">
+        <div class="entry-cat activity">Activity</div>
+        <div class="entry-title">デザインスタジオwirefactory 開設</div>
+        <div class="entry-caption">ワイヤーアートを体系的に研究、作品発表、ワークショップ（全国各地・TV・イベント出演など）、デザインワーク（レシピ・ディスプレイ・展示会など）、関連商品開発、How-toイラストレーション、ショップマネジメントなど多岐にわたって活動。</div>
+      </div>
+      <div class="entry">
+        <div class="entry-cat activity">Activity</div>
+        <div class="entry-title">「ワイヤークラフトペンチ＆ニッパ」（スリーピークス技研）製品開発・デザイン　グッドデザイン賞受賞</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-label">1997</div>
+    <div class="year-entries">
+      <div class="entry">
+        <div class="entry-cat book">Book</div>
+        <div class="entry-venue book">美術出版社／共著</div>
+        <div class="entry-title">道具大全</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-block">
+    <div class="year-label">1990</div>
+    <div class="year-entries">
+      <div class="entry">
+        <div class="entry-cat activity">Activity</div>
+        <div class="entry-title">フリーランスイラストレーターとして活動開始</div>
+        <div class="entry-caption">「デザインの現場」（美術出版社）を起点に、道具・工具・素材専門の編集者＆ライターとして雑誌・広告などで多数執筆・取材活動をおこなう。</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-name">中島郁子</div>
+  <div class="footer-copy">© 2026 Ikuko Nakajima</div>
+</footer>
+
+<script>
+function toggleNav(btn) {
+  btn.classList.toggle('active');
+  document.querySelector('.nav-top').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
