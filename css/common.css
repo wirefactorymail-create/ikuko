@@ -1,0 +1,333 @@
+/* ============================================================
+   common.css — ikukonakajima.jp 共通スタイル
+   全ページで共有。ページ固有のスタイルは各HTMLの<style>に記述。
+   ============================================================ */
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables */
+:root {
+  --accent: #f04a00;
+}
+
+/* Base */
+body {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  background: #fff;
+  color: #1a1a1a;
+  font-size: 14px;
+  max-width: 1200px;
+  margin: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   Nav
+   ============================================================ */
+nav {
+  padding: 0 48px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid #e8e8e8;
+}
+.nav-top {
+  display: flex;
+  align-items: flex-end;
+}
+.nav-bottom {
+  padding: 0;
+}
+.nav-logo {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: rgba(0,0,0,0.06);
+  text-decoration: none;
+  line-height: 0.75;
+  display: block;
+}
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+.nav-links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: #444;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nav-links a:hover {
+  color: var(--accent);
+}
+.nav-links a.active {
+  color: #1a1a1a;
+}
+.nav-case {
+  position: relative;
+}
+.nav-case-ja {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 10px;
+  color: #888;
+  white-space: nowrap;
+  padding-top: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+  letter-spacing: 0.06em;
+}
+.nav-case:hover .nav-case-ja {
+  opacity: 1;
+}
+.nav-lang {
+  border: 1px solid #ccc;
+  padding: 2px 7px;
+  border-radius: 2px;
+  font-size: 10px !important;
+  color: #999 !important;
+  letter-spacing: 0.1em;
+}
+
+/* Dropdown */
+.nav-item {
+  position: relative;
+}
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding-top: 12px;
+  z-index: 100;
+}
+.nav-item:hover .nav-dropdown {
+  display: block;
+}
+.nav-dropdown ul {
+  list-style: none;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  padding: 12px 0;
+  min-width: 160px;
+}
+.nav-dropdown ul li a {
+  display: block;
+  padding: 6px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  color: #888;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nav-dropdown ul li a:hover {
+  color: var(--accent);
+}
+
+/* ============================================================
+   Page header（index以外の全サブページ共通）
+   ============================================================ */
+.page-header {
+  padding: 24px 48px 0 48px;
+  overflow: hidden;
+  border-bottom: 2px solid #1a1a1a;
+  display: flex;
+  align-items: baseline;
+  gap: 32px;
+}
+.page-header-en {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(48px, 8vw, 100px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: #1a1a1a;
+  margin-bottom: -0.14em;
+}
+.page-header-ja {
+  font-size: 14px;
+  font-weight: 400;
+  color: #999;
+  letter-spacing: 0.06em;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+footer {
+  border-top: 1px solid #e8e8e8;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  line-height: 1;
+}
+.footer-name {
+  padding-left: 0;
+  margin-left: -0.08em;
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: clamp(80px, 20vw, 280px);
+  font-weight: 800;
+  color: rgba(0,0,0,0.03);
+  display: block;
+  white-space: nowrap;
+  line-height: 0.85;
+  pointer-events: none;
+  margin-top: -0.05em;
+}
+.footer-copy {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: #bbb;
+  letter-spacing: 0.08em;
+  position: absolute;
+  right: 48px;
+  bottom: 0.3em;
+}
+
+/* ============================================================
+   Hamburger
+   ============================================================ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  padding: 8px;
+  z-index: 200;
+  background: none;
+  border: none;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: #888;
+  transition: all 0.25s;
+}
+.hamburger.active span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* ============================================================
+   Responsive — 共通
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* Hamburger */
+  .hamburger { display: flex; }
+
+  /* Nav */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 !important;
+    position: relative;
+  }
+  .nav-bottom { width: 100%; padding: 0 !important; }
+  .nav-logo { padding: 10px 16px !important; display: block; }
+
+  .nav-top {
+    display: none;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #e8e8e8;
+  }
+  .nav-top.open { display: flex; }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0;
+    padding: 4px 16px 16px;
+    width: 100%;
+  }
+  .nav-links > li { border-bottom: 1px solid #f5f5f5; }
+  .nav-links a { display: block; padding: 11px 0; white-space: normal; }
+
+  .nav-item .nav-dropdown {
+    position: static;
+    display: block !important;
+    padding-top: 0;
+  }
+  .nav-item .nav-dropdown ul {
+    border: none;
+    background: #fafafa;
+    padding: 0 0 8px 16px;
+    min-width: unset;
+  }
+  .nav-item .nav-dropdown ul li a { padding: 8px 0; font-size: 11px; }
+
+  /* Page header */
+  .page-header { padding: 24px 16px 20px !important; flex-wrap: wrap; gap: 8px; }
+
+  /* Content areas — 各ページの主コンテナ */
+  .concept-body,
+  .page-body,
+  .contact-body,
+  .outputs-list { padding: 24px 16px 40px !important; }
+
+  /* Index — Hero */
+  .hero-img-wrap { padding: 16px !important; }
+  .hero-text { grid-template-columns: 1fr !important; }
+  .hero-catchcopy { padding: 20px 16px 12px !important; }
+  .hero-right { padding: 12px 16px 24px !important; max-width: 100%; }
+
+  /* Index — Pages grid */
+  .pages-grid { grid-template-columns: 1fr !important; }
+  .page-card { padding: 24px 16px !important; border-right: 1px solid #e8e8e8 !important; }
+
+  /* Case pages */
+  .illust-wrap { grid-template-columns: 1fr !important; gap: 20px; }
+  .photo-grid { grid-template-columns: 1fr !important; }
+  .photo-grid-3 { grid-template-columns: 1fr 1fr !important; }
+
+  /* Concept */
+  .three-item { grid-template-columns: 40px 1fr !important; gap: 12px; }
+  .notes { padding-left: 52px !important; }
+
+  /* Profile */
+  .profile-wrap { grid-template-columns: 1fr !important; padding: 32px 16px 48px !important; gap: 28px; }
+
+  /* Outputs / career */
+  .career-item { grid-template-columns: 48px 1fr !important; gap: 12px; }
+  .year-block { grid-template-columns: 1fr !important; gap: 8px; }
+  .year-label { font-size: 20px !important; }
+
+  /* Documentation */
+  .doc-block { grid-template-columns: 1fr !important; gap: 20px; }
+  .doc-cards-grid { grid-template-columns: 1fr !important; }
+  .doc-thumb { max-width: 100%; }
+
+  /* Background sketch */
+  .bg-sketch { display: none; }
+
+  /* Footer */
+  .footer-copy { right: 16px !important; }
+}
