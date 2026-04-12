@@ -16,6 +16,9 @@
 }
 
 /* Base */
+html {
+  overflow-x: hidden;
+}
 body {
   font-family: 'BIZ UDPGothic', sans-serif;
   background: #fff;
