@@ -16,13 +16,17 @@
 }
 
 /* Base */
+html {
+  display: flex;
+  justify-content: center;
+}
 body {
   font-family: 'BIZ UDPGothic', sans-serif;
   background: #fff;
   color: #1a1a1a;
   font-size: 14px;
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
   position: relative;
   overflow-x: hidden;
 }
