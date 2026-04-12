@@ -175,7 +175,7 @@ nav {
   letter-spacing: -0.02em;
   line-height: 1;
   color: #1a1a1a;
-  margin-bottom: -0.14em;
+  margin-bottom: -0.2em;
 }
 .page-header-ja {
   font-size: 14px;
@@ -193,6 +193,17 @@ footer {
   position: relative;
   overflow: hidden;
   line-height: 1;
+}
+footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(key/5050.jpeg);  /* 切替候補: url(key/IMG_5547_w.jpeg) */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
 }
 .footer-name {
   padding-left: 0;
