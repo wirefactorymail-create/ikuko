@@ -17,17 +17,29 @@
 
 /* Base */
 html {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 body {
   font-family: 'BIZ UDPGothic', sans-serif;
   background: #fff;
   color: #1a1a1a;
   font-size: 14px;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 0;
   position: relative;
-  overflow-x: hidden;
+}
+
+/* コンテンツ幅制限（bodyではなく各コンテナに適用） */
+.page-wrap,
+nav,
+.page-header,
+.page-body,
+.concept-body,
+.contact-body,
+.outputs-list,
+footer {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ============================================================
@@ -193,6 +205,8 @@ footer {
   line-height: 0.85;
   pointer-events: none;
   margin-top: -0.05em;
+  max-width: 100%;
+  overflow: hidden;
 }
 .footer-copy {
   font-family: 'BIZ UDPGothic', sans-serif;
