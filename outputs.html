@@ -27,7 +27,7 @@
 /* Section head */
 .section-head {
   padding: 40px 0 24px 0;
-  border-top: 1px solid #e8e8e8;
+  border-top: 1px solid #ccc;
   margin-top: 40px;
   display: flex;
   align-items: baseline;
@@ -73,17 +73,26 @@
   text-transform: uppercase;
 }
 
-/* Profile tagline */
-.profile-tagline {
-  font-family: 'BIZ UDPGothic', sans-serif;
-  font-size: 15px;
-  color: #888;
-  letter-spacing: 0.05em;
-  margin-bottom: 16px;
-}
 
 /* Outputs list */
-.outputs-list { padding: 48px 48px 64px 48px; }
+.outputs-list { padding: 0 48px 64px 48px; }
+
+/* Statement block override for this page */
+.outputs-list .statement-block {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  align-items: end;
+  margin: 0 -48px 32px -48px;
+  padding: 48px 48px 32px 48px;
+}
+.outputs-list .statement-title {
+  font-family: 'Noto Sans JP', sans-serif !important;
+  font-size: clamp(36px, 6vw, 80px) !important;
+  font-weight: 900 !important;
+  color: #ddd !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em !important;
+}
 .year-block {
   display: grid;
   grid-template-columns: 80px 1fr;
@@ -237,25 +246,19 @@
 
 <div class="outputs-list">
 
-  <!-- 略歴 -->
-  <div class="section-head" style="border-top: none; margin-top: 0;"><span class="section-head-ja">略歴</span></div>
-
   <!-- 略歴本文 -->
-  <div class="year-block">
-    <div class="year-label"></div>
-    <div class="year-entries">
-      <div class="entry">
-        <div style="font-family:'BIZ UDPGothic',sans-serif; font-size: clamp(22px,3vw,36px); font-weight:700; letter-spacing:0.01em; color:#1a1a1a; line-height:1.2; margin-bottom:6px;">中島 郁子 ／ Ikuko Nakajima</div>
-        <div class="entry-title" style="margin-bottom:12px;">デザイン学研究者・編集者＆ライター・デザイナー・大学講師</div>
-        <div class="profile-tagline">わかるために、デザインする。</div>
-        <div class="entry-title">東京藝術大学大学院デザイン科修了（学士・修士）</div>
-        <div class="entry-title">女子美術大学短期大学部「デザイン論」「情報デザイン論」（非常勤講師）</div>
-        <div class="entry-title">三条マルシェ実行委員</div>
-        <div class="entry-title">日本デザイン学会　情報デザイン研究部会幹事／第一支部幹事</div>
-        <div class="entry-title">デザインスタジオwirefactory主宰</div>
-      </div>
+  <div class="statement-block" style="margin-left: -48px; margin-right: -48px; padding-left: 48px; padding-right: 48px;">
+    <div class="statement-title">わかる<br>ために、<br>デザイン<br>する。</div>
+    <div class="statement-body">
+      <div style="font-family:'BIZ UDPGothic',sans-serif; font-size: clamp(18px,2.5vw,28px); font-weight:700; letter-spacing:0.01em; color:#1a1a1a; line-height:1.2; margin-bottom:6px;">中島 郁子 ／ Ikuko Nakajima</div>
+      <div class="entry-title" style="margin-bottom:12px;">デザイン学研究者・編集者＆ライター・デザイナー・大学講師</div>
+      <div class="entry-title">東京藝術大学大学院デザイン科修了（学士・修士）</div>
+      <div class="entry-title">女子美術大学短期大学部「デザイン論」「情報デザイン論」（非常勤講師）</div>
+      <div class="entry-title">三条マルシェ実行委員</div>
+      <div class="entry-title">日本デザイン学会　情報デザイン研究部会幹事／第一支部幹事</div>
+      <div class="entry-title">デザインスタジオwirefactory主宰</div>
     </div>
-  </div>
+  </div><!-- /.statement-block -->
 
   <!-- SNS links -->
   <div style="margin: 20px 0 0 0; padding: 16px 0 0 0; border-top: 1px solid #f0f0f0; display: flex; gap: 24px; flex-wrap: wrap; align-items: center;">
