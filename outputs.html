@@ -26,22 +26,25 @@
 <style>
 /* Section head */
 .section-head {
-  padding: 40px 0 24px 0;
+  padding: 32px 0 24px 0;
   border-top: 1px solid #ccc;
-  margin-top: 40px;
+  margin-top: 32px;
   display: flex;
   align-items: baseline;
   gap: 16px;
   position: relative;
 }
-.section-head:first-child { margin-top: 0; border-top: none; }
+.section-head:first-child { margin-top: 0; }
+
+/* statement-hero: outputs固有 */
+.statement-hero { border-bottom: none; margin-bottom: 0; }
+.statement-hero-body { padding-left: 0; }
 .section-head-ja {
   font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.06em;
   color: #999;
-  padding-left: 12px;
 }
 .entry-cat {
   font-family: 'Inter', sans-serif;
@@ -76,28 +79,11 @@
 
 /* Outputs list */
 .outputs-list { padding: 0 48px 64px 48px; }
-
-/* Statement block override for this page */
-.outputs-list .statement-block {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  align-items: end;
-  margin: 0 -48px 32px -48px;
-  padding: 48px 48px 32px 48px;
-}
-.outputs-list .statement-title {
-  font-family: 'Noto Sans JP', sans-serif !important;
-  font-size: clamp(36px, 6vw, 80px) !important;
-  font-weight: 900 !important;
-  color: #ddd !important;
-  line-height: 1.15 !important;
-  letter-spacing: -0.02em !important;
-}
 .year-block {
   display: grid;
   grid-template-columns: 80px 1fr;
   padding: 4px 0;
-  gap: 32px;
+  gap: 24px;
 }
 .year-label {
   font-family: 'Inter', sans-serif;
@@ -110,7 +96,7 @@
 .year-entries {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 .entry {
   display: flex;
@@ -244,32 +230,30 @@
   <div class="page-header-ja">プロフィールと研究成果</div>
 </div>
 
-<div class="outputs-list">
+<!-- キービジュアル -->
+<div class="keyvisual-block">
+  <img src="key/PXL_20230624_022315169_cleanup.jpg" alt="ワークショップのドキュメンテーション" style="opacity:0.9;">
+</div>
+<p class="statement-hero-note">リアルタイムドキュメンテーション（日本デザイン学会 第70回春季研究発表大会@芝浦工大・2023）</p>
 
-  <!-- 略歴本文 -->
-  <div class="statement-block" style="margin-left: -48px; margin-right: -48px; padding-left: 48px; padding-right: 48px;">
-    <div class="statement-title">わかる<br>ために、<br>デザイン<br>する。</div>
-    <div class="statement-body">
-      <div style="font-family:'BIZ UDPGothic',sans-serif; font-size: clamp(18px,2.5vw,28px); font-weight:700; letter-spacing:0.01em; color:#1a1a1a; line-height:1.2; margin-bottom:6px;">中島 郁子 ／ Ikuko Nakajima</div>
-      <div class="entry-title" style="margin-bottom:12px;">デザイン学研究者・編集者＆ライター・デザイナー・大学講師</div>
-      <div class="entry-title">東京藝術大学大学院デザイン科修了（学士・修士）</div>
-      <div class="entry-title">女子美術大学短期大学部「デザイン論」「情報デザイン論」（非常勤講師）</div>
-      <div class="entry-title">三条マルシェ実行委員</div>
-      <div class="entry-title">日本デザイン学会　情報デザイン研究部会幹事／第一支部幹事</div>
-      <div class="entry-title">デザインスタジオwirefactory主宰</div>
+<!-- 略歴ヒーロー -->
+<div class="statement-hero">
+  <div class="statement-hero-title">わかるために、<br>デザインする</div>
+  <div class="statement-hero-body">
+    <div style="font-family:'BIZ UDPGothic',sans-serif; font-size: clamp(18px,2.5vw,26px); font-weight:700; letter-spacing:0.01em; color:#1a1a1a; line-height:1.2; margin-bottom:6px;">中島 郁子 ／ Ikuko Nakajima</div>
+    <div class="entry-title" style="margin-bottom:12px;">デザイン学研究者・編集者＆ライター・デザイナー・大学講師</div>
+    <div class="entry-title">東京藝術大学大学院デザイン科修了（学士・修士）</div>
+    <div class="entry-title">女子美術大学短期大学部（非常勤講師）</div>
+    <div class="entry-title">三条マルシェ実行委員</div>
+    <div class="entry-title">日本デザイン学会　情報デザイン研究部会幹事／第一支部幹事</div>
+    <div class="entry-title">デザインスタジオwirefactory主宰</div>
+    <div style="margin-top: 16px;">
+      <a href="https://www.facebook.com/ikuko.nakajima" target="_blank" rel="noopener" style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.12em; color: #888; text-decoration: none;">→ Facebook</a>
     </div>
-  </div><!-- /.statement-block -->
-
-  <!-- SNS links -->
-  <div style="margin: 20px 0 0 0; padding: 16px 0 0 0; border-top: 1px solid #f0f0f0; display: flex; gap: 24px; flex-wrap: wrap; align-items: center;">
-    <a href="https://www.facebook.com/ikuko.nakajima" target="_blank" rel="noopener" style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.12em; color: #888; text-decoration: none;">→ Facebook</a>
-    <!-- note リンク追加予定: <a href="" target="_blank" rel="noopener" style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.12em; color: #888; text-decoration: none;">→ note</a> -->
   </div>
+</div>
 
-  <div style="margin: 16px 0 0 0;">
-    <img src="key/PXL_20230624_022315169_cleanup.jpg" alt="ワークショップのドキュメンテーション" style="width: 100%; display: block; opacity: 0.85;">
-    <p style="font-family: 'Inter', sans-serif; font-size: 11px; color: #aaa; letter-spacing: 0.08em; padding: 0; text-align: right; margin-top: 6px;">リアルタイムドキュメンテーション（日本デザイン学会 第70回春季研究発表大会@芝浦工大・2023）</p>
-  </div>
+<div class="outputs-list">
 
   <!-- 研究発表 -->
   <div id="outputs" class="section-head"><span class="section-head-ja">研究発表</span></div>
@@ -431,9 +415,7 @@
   <!-- 著書・出版 -->
   <div class="section-head"><span class="section-head-ja">著書・出版</span></div>
 
-  <div class="year-block">
-    <div class="year-label">—</div>
-    <div class="year-entries">
+  <div class="year-entries">
       <div class="entry">
         <div class="entry-venue">文溪堂／単著 2008</div>
         <div class="entry-title">針金細工</div>
@@ -454,15 +436,12 @@
         <div class="entry-venue">美術出版社／共著 1997</div>
         <div class="entry-title">道具大全</div>
       </div>
-    </div>
   </div>
 
   <!-- 受賞 -->
   <div class="section-head"><span class="section-head-ja">受賞・入選</span></div>
 
-  <div class="year-block">
-    <div class="year-label">—</div>
-    <div class="year-entries">
+  <div class="year-entries">
       <div class="entry">
         <div class="entry-venue">日本デザイン学会第65回春季研究発表大会　2018</div>
         <div class="entry-title">グッドプレゼンテーション賞</div>
@@ -475,7 +454,6 @@
         <div class="entry-venue">日本グラフィック展　1987</div>
         <div class="entry-title">入選</div>
       </div>
-    </div>
   </div>
 
   <!-- 詳細 -->
@@ -726,8 +704,8 @@
       </div>
       <div class="entry">
         <div class="entry-cat activity">Activity</div>
-        <div class="entry-title">「銀座目利き商店街」＠松屋銀座 出展</div>
-        <div class="entry-caption">三条地場産品×職人の工具をテーマにした期間限定ショップを展開。→ <a href="project.html#ginza" style="color: inherit; text-decoration: underline;">Works</a></div>
+        <div class="entry-title">プレゼンテーション「三条地場産業の技術とポテンシャルについて」＠松屋銀座「銀座目利き商店街」</div>
+        <div class="entry-caption">期間限定ショップ「三条地場産品×アーティスト・職人が自分の欲しい工具」を展開。会場にてレクチャーと実演で、地域の技術とポテンシャルをアピール。→ <a href="project.html#ginza" style="color: inherit; text-decoration: underline;">Works</a></div>
       </div>
       <div class="entry">
         <div class="entry-cat activity">Activity</div>

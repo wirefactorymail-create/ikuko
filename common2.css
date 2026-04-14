@@ -13,6 +13,14 @@
 /* Variables */
 :root {
   --accent: #f04a00;
+  --line-strong: 1px solid #ccc;
+  --line-soft: 1px solid #ececec;
+  --line-accent: 2px solid #f04a00;
+  --space-xs: 8px;
+  --space-s: 16px;
+  --space-m: 24px;
+  --space-l: 48px;
+  --space-xl: 64px;
 }
 
 /* Base */
@@ -33,6 +41,7 @@ body {
 .page-wrap,
 nav,
 .page-header,
+.statement-hero,
 .page-body,
 .concept-body,
 .contact-body,
@@ -185,26 +194,56 @@ nav {
 }
 
 /* ============================================================
-   Statement block — 全ページ共通（Profile / Documentation / Concept）
+   Statement hero — 全ページ共通ヒーロー部品
    ============================================================ */
-.statement-block {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: end;
-  margin-bottom: 32px;
+/* キービジュアルブロック（全ページ共通） */
+.keyvisual-block {
+  max-width: 1200px;
+  margin: 32px auto 0;
+  padding: 0 48px;
+  overflow: hidden;
 }
-.statement-title {
+.keyvisual-block img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+.statement-hero-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: #aaa;
+  text-align: right;
+  padding: 0 48px;
+  margin: 6px 0 16px 0;
+}
+.statement-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(280px, 0.98fr);
+  align-items: start;
+  padding: 32px 48px 32px 48px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 48px;
+}
+/* concept-body内のstatement-heroはフル幅表示 */
+.concept-body > .statement-hero {
+  margin-left: -48px;
+  margin-right: -48px;
+}
+.statement-hero-title {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: clamp(36px, 6vw, 80px);
+  font-size: clamp(36px, 5vw, 64px);
   font-weight: 900;
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: #ddd;
-  padding: 16px 32px 16px 0;
+  padding-right: 40px;
 }
-.statement-body {
-  padding: 16px 0 16px 32px;
-  border-left: 1px solid #ccc;
+.statement-hero-body {
+  padding-left: 32px;
   font-size: 13px;
   line-height: 2;
   color: #666;
@@ -220,17 +259,6 @@ footer {
   position: relative;
   overflow: hidden;
   line-height: 1;
-}
-footer::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url(key/5050.jpeg);  /* 切替候補: url(key/IMG_5547_w.jpeg) */
-  background-size: cover;
-  background-position: center;
-  opacity: 0.12;
-  pointer-events: none;
-  z-index: 0;
 }
 .footer-name {
   padding-left: 0;
@@ -349,6 +377,9 @@ footer::before {
   .contact-body,
   .outputs-list { padding: 24px 16px 40px !important; }
 
+  /* Keyvisual block */
+  .keyvisual-block { padding: 0 16px !important; }
+
   /* Index — Hero */
   .hero-img-wrap { padding: 16px !important; }
   .hero-text { grid-template-columns: 1fr !important; }
@@ -375,6 +406,12 @@ footer::before {
   .career-item { grid-template-columns: 48px 1fr !important; gap: 12px; }
   .year-block { grid-template-columns: 1fr !important; gap: 8px; }
   .year-label { font-size: 20px !important; }
+
+  /* Statement hero */
+  .statement-hero { grid-template-columns: 1fr !important; padding: 24px 16px !important; }
+  .statement-hero-title { padding-right: 0 !important; margin-bottom: 16px; }
+  .statement-hero-body { padding-left: 0 !important; border-left: none !important; }
+  .concept-body > .statement-hero { margin-left: -16px; margin-right: -16px; }
 
   /* Documentation */
   .doc-block { grid-template-columns: 1fr !important; gap: 20px; }
