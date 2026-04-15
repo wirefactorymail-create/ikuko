@@ -140,6 +140,15 @@
   display: block;
 }
 
+/* page-header上下余白・テキスト罫線設置 */
+.page-header {
+  padding-top: 32px;
+  padding-bottom: 0;
+}
+.page-header-en {
+  margin-bottom: -0.28em;
+}
+
 @media (max-width: 768px) {
   .page-body { padding: 24px 16px 40px !important; }
 }
@@ -148,7 +157,7 @@
 <body>
 
 <nav>
-<button class="hamburger" aria-label="メニュー" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
+<button class="hamburger" aria-label="メニュー" onclick="toggleNav(this)"></button>
   <div class="nav-bottom">
     <a class="nav-logo" href="/">IKUKO<br>NAKAJIMA</a>
   </div>
@@ -255,7 +264,6 @@
 </div>
 
 <footer>
-  <div class="footer-name">中島郁子</div>
   <div class="footer-copy">© 2026 Ikuko Nakajima</div>
 </footer>
 

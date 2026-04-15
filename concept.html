@@ -36,17 +36,6 @@
 /* Content */
 .concept-body { padding: 48px 48px 64px 48px; }
 
-/* Statement */
-.concept-statement {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: clamp(18px, 2.2vw, 26px);
-  font-weight: 900;
-  line-height: 1.9;
-  letter-spacing: 0.02em;
-  color: #1a1a1a;
-  margin: 48px 0;
-  text-wrap: pretty;
-}
 
 /* Lead block */
 .concept-lead {
@@ -85,12 +74,6 @@
   max-width: 720px;
 }
 
-/* Divider */
-.concept-divider {
-  border: none;
-  border-top: 1px solid #ccc;
-  margin: 40px 0;
-}
 
 /* Definition list */
 .def-list {
@@ -98,6 +81,7 @@
   flex-direction: column;
   gap: 0;
   margin-bottom: 48px;
+  border-bottom: 1px solid #ececec;
 }
 .def-item {
   display: grid;
@@ -111,7 +95,7 @@
   font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 15px;
   font-weight: 700;
-  color: #bbb;
+  color: #1a1a1a;
   letter-spacing: 0.06em;
   line-height: 1.8;
 }
@@ -120,6 +104,7 @@
   line-height: 2;
   color: #444;
   letter-spacing: 0.03em;
+  max-width: 560px;
 }
 
 /* Note */
@@ -134,12 +119,37 @@
   max-width: 720px;
 }
 
+/* Hero text — index style */
+.concept-hero-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  margin: 0 -48px 48px -48px;
+}
+.concept-hero-title {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: clamp(40px, 7vw, 88px);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #ddd;
+  padding: 18px 48px;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+.concept-hero-lead {
+  padding: 18px 48px;
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 13px;
+  line-height: 2.1;
+  color: #666;
+  letter-spacing: 0.03em;
+}
+
 /* Image grid */
 .image-grid-caption {
-  margin-top: 48px;
+  margin-top: -32px;
   margin-bottom: 24px;
-  padding-top: 24px;
-  border-top: 1px solid #ccc;
 }
 .concept-section-head {
   font-family: 'Inter', sans-serif;
@@ -198,17 +208,19 @@
 }
 .profile-link:hover { opacity: 0.7; }
 .image-grid-title {
-  font-size: 13px;
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 15px;
   font-weight: 700;
   color: #1a1a1a;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
+  line-height: 1.8;
   margin-bottom: 8px;
 }
 .image-grid-desc {
-  font-size: 12px;
-  line-height: 1.9;
-  color: #888;
-  letter-spacing: 0.04em;
+  font-size: 13px;
+  line-height: 2;
+  color: #444;
+  letter-spacing: 0.03em;
 }
 .image-grid {
   display: grid;
@@ -229,13 +241,16 @@
   .concept-title-vertical { font-size: 48px !important; }
   .def-item { grid-template-columns: 1fr !important; gap: 6px; }
   .image-grid { grid-template-columns: 1fr 1fr !important; }
+  .concept-hero-text { grid-template-columns: 1fr !important; margin: 0 -16px 32px -16px; }
+  .concept-hero-title { padding: 24px 16px; }
+  .concept-hero-lead { padding: 0 16px 24px; }
 }
 </style>
 </head>
 <body>
 
 <nav>
-<button class="hamburger" aria-label="メニュー" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
+<button class="hamburger" aria-label="メニュー" onclick="toggleNav(this)"></button>
   <div class="nav-bottom">
     <a class="nav-logo" href="/">IKUKO<br>NAKAJIMA</a>
   </div>
@@ -262,20 +277,18 @@
 
   <img class="concept-hero" src="key/IMG_6257_key.jpeg" alt="デザイン環世界" style="width:100%; height:auto; margin-bottom:0;">
 
-  <hr class="concept-divider">
-
-  <h2 class="concept-statement">「デザインは人をしあわせにする技術である」——実践と研究を往還しながら、「自分をとりまくデザイン」を構造化、あるいは「できない」を可視化して、自由な場を設計する。</h2>
-
-  <hr class="concept-divider">
-
-  <div class="statement-hero">
-    <div class="statement-hero-title">デザイン<br>環世界</div>
-    <p class="statement-hero-body">多種多様な「デザイン」——成果物・サービス・プロセス・コンセプト・イマジネーション——がどのような要素を内包し、いかにして構成され、実際にどう動いているか。世界をわかるためのツールとして、体系モデル「デザイン環世界」を提唱し、最適化しながら実践している。</p>
+  <div class="concept-hero-text" style="margin-top: 32px;">
+    <div class="concept-hero-title">デザイン<br>環世界</div>
+    <div class="concept-hero-lead">
+      <p>「デザインは人をしあわせにする技術である」—— 実践と研究を往還しながら、「自分をとりまくデザイン」を構造化、 あるいは「できない」を可視化して、自由な場を設計する。</p>
+      <p>多種多様な「デザイン」がどのような要素を内包し、いかにして構成され、実際にどう動いているか。世界をわかるためのツールとして、体系モデル「デザイン環世界」を提唱し、最適化しながら実践している。</p>
+    </div>
   </div>
 
   <div class="def-list">
     <div class="def-item">
-      <div class="def-term">デザイン環世界<br>のイメージ</div>
+      <div class="def-term">デザイン環世界<br>
+      イメージ</div>
       <div class="def-desc">スカラー的な多次元世界の中に「デザイン要素」が離散的に存在し、デザイン行為によって変容しながら、まるで生態系のように相互に作用し循環している。</div>
     </div>
     <div class="def-item">
@@ -288,13 +301,14 @@
     </div>
     <div class="def-item">
       <div class="def-term">概念の起点</div>
-      <div class="def-desc">「Umwelt（Uexküll）」の「生態系」における相互作用と循環のイメージを発想の起点とし、情報デザイン研究部会の「環世界」議論も踏まえ、独自に構築した。<br><span style="font-size:11px; color:#bbb;">参考：ヤーコプ・フォン・ユクスキュル「生物から見た世界」（岩波文庫）／日本デザイン学会情報デザイン研究部会「環世界」議論</span></div>
+      <div class="def-desc">「Umwelt（Uexküll）」の「生態系」における相互作用と循環のイメージを発想の起点とし、情報デザイン研究部会の「環世界」議論も踏まえ、独自に構築した。<br><span style="font-size:11px; color:#bbb;">参考：ユクスキュル「生物から見た世界」（岩波文庫）／日本デザイン学会情報デザイン研究部会「環世界」議論</span></div>
     </div>
   </div>
 
-  <div class="image-grid-caption">
-    <p class="image-grid-title">「デザイン環世界」の概念図・アイデアスケッチ</p>
-    <p class="image-grid-desc">デザイン学研究者・編集者＆ライター・デザイナー・教員・地域コミュニティ実践者・イラストレーターほか、多種多様なステイタスと現場から見た「わたしをとりまくデザイン環世界」</p>
+  <div class="image-grid-caption def-item" style="margin-bottom: 24px; border-top: none;">
+    <p class="image-grid-title">概念図・<br>アイデアスケッチ</p>
+    <p class="image-grid-desc">デザイン学研究者・編集者＆ライター・デザイナー・教員・地域コミュニティ実践者・イラストレーターほか、<br>
+    多種多様なステイタスと現場から見た「わたしをとりまくデザイン環世界」</p>
   </div>
   <div class="image-grid">
     <img src="key/IMG_0172.JPG" alt="">
@@ -310,31 +324,17 @@
 
   <p class="concept-text" style="margin-bottom: 24px;">以上の問題意識から、「マルシェ的」というフィールドを設定した。同じ場に研究をもちよって、議論して、またもちかえる——みんなが遊ぶことができる共通の「お砂場」であり、闘う「バトルフィールド」でもある。</p>
 
-  <p class="concept-text" style="margin-bottom: 24px;">では、なぜマルシェなのか。</p>
-  <div class="def-list" style="margin-bottom: 24px;">
+  <div class="def-list" style="margin-bottom: 40px;">
     <div class="def-item">
-      <div class="def-term">１</div>
-      <div class="def-desc">「大学」だと関係者は盛り上がるがそれ以外が疎外される</div>
-    </div>
-    <div class="def-item">
-      <div class="def-term">２</div>
-      <div class="def-desc">ビジネスだと学生が疎外される</div>
-    </div>
-    <div class="def-item">
-      <div class="def-term">３</div>
-      <div class="def-desc">生活世界だと価値を共有するのに時間がかかる</div>
-    </div>
-    <div class="def-item">
-      <div class="def-term">４</div>
-      <div class="def-desc">見回してみると、「マルシェ」的な地域に開かれた取り組みをしている研究者・学生が多い。みな「自分のマルシェは特別（extreme）」と言っている。</div>
+      <div class="def-term">「マルシェ的な場」とは</div>
+      <div class="def-desc">「マルシェ」は、大学でもビジネス現場でも生活世界でもない、複数の立場や価値観が混ざり合う境界的な場である。そこでは多様な人々が自分の活動を"マルシェ的"に位置づけ、固有の場を築こうとしている。ゆえに「マルシェ的な場」は、異なる研究の視点を交差させ、共有的に議論するための場として有効ではないか。</div>
     </div>
   </div>
-  <p class="concept-text" style="margin-bottom: 24px;">であれば、「マルシェ」を、皆が議論する場として使えるのではないか。</p>
 
   <p class="concept-text" style="margin-bottom: 24px;">「マルシェ」は地域に開かれ、誰でも入ることができる。しかし一度中に入ると、物理的な境界と〈あきない〉の論理によって構造化された「閉ざされた環世界」として機能する。特定のマルシェを共通の場にすることはできない。だからこそ2026年は、概念としての「マルシェ」という記号の上を場にする。</p>
 
   <p class="concept-text" style="margin-bottom: 24px;">ちなみに、筆者による「三条マルシェ」の観察から、二つの知見が得られている。</p>
-  <div class="def-list" style="margin-bottom: 24px;">
+  <div class="def-list" style="margin-bottom: 40px;">
     <div class="def-item">
       <div class="def-term">知見１</div>
       <div class="def-desc">物理的に人やモノが流れ、〈あきない〉というfunctionを介在させることで、モノのみならずこと（情報、体験、役割）が交換される。〈あきない〉を介した循環は「現実世界における環世界モデル」として、観察しやすい事例である。</div>

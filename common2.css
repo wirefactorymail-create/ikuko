@@ -254,36 +254,28 @@ nav {
    Footer
    ============================================================ */
 footer {
-  border-top: 1px solid #ccc;
-  padding: 0;
-  position: relative;
-  overflow: hidden;
-  line-height: 1;
+  background-color: #000;
+  background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('./key/IMG_0177B.jpeg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px 48px;
+  text-align: right;
+  min-height: clamp(60px, 10vw, 120px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
-.footer-name {
-  padding-left: 0;
-  margin-left: -0.08em;
-  font-family: 'Shippori Mincho B1', serif;
-  font-size: clamp(80px, 20vw, 280px);
-  font-weight: 800;
-  color: rgba(0,0,0,0.03);
-  display: block;
-  white-space: nowrap;
-  line-height: 0.85;
-  pointer-events: none;
-  margin-top: -0.05em;
-  max-width: 100%;
-  overflow: hidden;
-}
+
 .footer-copy {
-  font-family: 'BIZ UDPGothic', sans-serif;
-  font-size: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
   font-weight: 400;
-  color: #bbb;
+  color: #fff;
   letter-spacing: 0.08em;
-  position: absolute;
-  right: 48px;
-  bottom: 0.3em;
+}
+
+footer a {
+  color: inherit;
 }
 
 /* ============================================================
